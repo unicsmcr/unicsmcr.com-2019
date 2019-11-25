@@ -10,7 +10,7 @@ import Contact from './Contact';
 import NoMatch from './NoMatch';
 import {Layout} from './components/Layout';
 import {Navigationbar} from './components/Navigationbar';
-{/* hello manya - ayesha */}
+
 function App() {
   return (
     <React.Fragment>
@@ -34,6 +34,5 @@ function App() {
   );
 }
 
-{/* Hi Im Manyaaa */}
 
 export default App;

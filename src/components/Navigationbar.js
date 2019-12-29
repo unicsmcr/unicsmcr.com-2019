@@ -5,8 +5,10 @@ import { Link } from 'react-router-dom';
 import UniCS_logo from '../assets/UniCS_logo.png'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { fab } from '@fortawesome/free-brands-svg-icons'
+// import { fab } from '@fortawesome/free-brands-svg-icons'  <-- isn't used?
 import {faFacebookSquare,faTwitterSquare, faInstagram} from '@fortawesome/free-brands-svg-icons'
+
+import { Link as link2, animateScroll as scroll} from "react-scroll";
 
 const Styles = styled.div`
 .navbar{
@@ -24,12 +26,15 @@ a:hover, .navbar-brand:hover, .navbar-nav, .nav-link:hover{
     text-decoration: none;
     color: #AC6FC6;
 }
+#contact{
+    color: blue;
+}
 `;
 
 export const Navigationbar = () => (
     
     <Styles>
-        <Navbar expand = 'lg'>
+        <Navbar expand = 'lg' sticky="top">
         <Navbar.Brand> 
             <Link to="/Home">
                 <img src={UniCS_logo} alt = "logo" style = {{width:95, marginTop: -2}}/> 
@@ -69,9 +74,26 @@ export const Navigationbar = () => (
                     </Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
+                    
                     <Nav.Link>
                         <Link to = "/Contact">Contact</Link>
                     </Nav.Link>
+                    {/*                 
+                    
+                    <Nav.Link>
+                        <link2
+                            activeClass="active"
+                            to="contact"
+                            spy={true}
+                            smooth={true}
+                            offset={-70}
+                            duration={500}
+                        >Contact
+                        </link2>
+                    </Nav.Link>
+                    */}
+                    
+
                 </Nav.Item>
                 <Nav.Item>
                     <a target="_blank" href="http://www.facebook.com/unicsmanchester/" style={{ marginLeft:280, paddingLeft: 10}}>

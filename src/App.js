@@ -1,7 +1,6 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom'
 import Home from './Home';
-import Team from './Team';
 import Jobs from './Jobs';
 import Gallery from './Gallery';
 import Sponsors from './Sponsors';
@@ -20,7 +19,6 @@ function App() {
           <Switch>
             <Route exact path = "/" component = {Home}/>
             <Route path="/Home" component={Home}/>
-            <Route path = "/Team" component = {Team}/>
             <Route path = "/Jobs" component = {Jobs}/>
             <Route path = "/Gallery" component = {Gallery}/>
             <Route path = "/Sponsors" component = {Sponsors}/>

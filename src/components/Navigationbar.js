@@ -3,6 +3,7 @@ import {Nav, Navbar} from 'react-bootstrap';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import UniCS_logo from '../assets/UniCS_logo.png'
+import '../font.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { fab } from '@fortawesome/free-brands-svg-icons'  <-- isn't used?
@@ -20,6 +21,7 @@ a, .navbar-brand, .navbar-nav, .nav-link{
     padding-left: 20px;
     font-size: 18px;
     color: #FAF9FE;
+    font-family: Nova Light;
 }
 
 a:hover, .navbar-brand:hover, .navbar-nav, .nav-link:hover{
@@ -50,9 +52,10 @@ export const Navigationbar = () => (
                 </Nav.Item>
                 <Nav.Item>
                     <Nav.Link>
-                        <Link to ="/Team">Team</Link>
+                        <Link to ="/Home">Team</Link>
                     </Nav.Link>
                 </Nav.Item>
+                {/* ^add the ability to scroll to meet the team */}
                 <Nav.Item>
                     <Nav.Link>
                         <Link to ="/Jobs">Jobs</Link>

@@ -1,0 +1,19 @@
+h1, h2, figure, figcaption {
+    font-family: "Nexa Light";
+    text-align: center;
+    margin: auto;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+figure {
+    width: 40%;
+}
+figcaption {
+    text-align: left;
+    padding-left: 30px;
+    padding-right: 30px;
+    color: black;
+    border-style: solid;
+    border-color: #d3d3d3;
+}
+

@@ -19,9 +19,8 @@ const Styles = styled.div`
 a, .navbar-brand, .navbar-nav, .nav-link{
     text-decoration: none;
     padding-left: 20px;
-    font-size: 18px;
+    font-size: 16px;
     color: #FAF9FE;
-    font-family: Nova Light;
 }
 
 a:hover, .navbar-brand:hover, .navbar-nav, .nav-link:hover{

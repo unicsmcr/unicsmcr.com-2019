@@ -2,17 +2,7 @@ import React from "react";
 import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './font.css';
-  
-
-// following ensures the width of all Divs is resizable
-const Div = styled.div`
-    width: 100vw;
-    position: relative;
-    margin-left: -50vw;
-    left: 50%;
-    font-family: Nexa Light;
-
-`;
+import './home.css';
 
 const Header = styled.div`
     color:white;
@@ -22,16 +12,6 @@ const Header = styled.div`
     padding-bottom:10px;
     font-family:Nexa Bold;
 `;
-
-const divBlack = {
-    backgroundColor:"black",
-    height:"600px"
-}
-
-const divPurple = {
-    backgroundColor:"#350B4D",
-    height:"600px"
-}
 
 const aboutUs = (
         <p>UniCS is the University of Manchester's tech society. We are a big community of people with 
@@ -48,22 +28,23 @@ const aboutUs = (
 export default function Home() {
     return(
         <div>
-            <Div style={divBlack}>
+            <div class="divBlack">
                 <Header style={{fontSize:"5em"}}>Uni<span style={{color:"yellow"}}>CS</span></Header>
                 <h2 style={{textAlign:"center", color:"white"}}>University of Manchester</h2>
                 <h2 style={{textAlign:"center", color:"white", lineHeight:"50%"}}>Computer Science Society</h2>
-            </Div>
-            <Div style={divPurple}>
+            </div>
+                
+            <div class="divPurple">
                 <Header>About Us</Header>
                 <h2 style={{color:"white", fontSize:"1.5em", paddingLeft: "70px", paddingRight: "70px"}}>{aboutUs}</h2>
+            </div>
 
-            </Div>
-            <Div style={divBlack}>
+            <div class="divBlack">
                 <Header>Meet The Team</Header>
-                </Div>
-            <Div style={divPurple}>
+            </div>
+            <div class="divPurple">
                 <Header>Contact Us</Header>
-            </Div>
+            </div>
         </div>
     )
 }

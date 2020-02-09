@@ -1,9 +1,9 @@
-h1, h2, figure, figcaption {
+.sponsors {
     font-family: "Nexa Light";
     text-align: center;
     margin: auto;
-    padding-top: 30px;
-    padding-bottom: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
 figure {
     width: 40%;
@@ -12,8 +12,19 @@ figcaption {
     text-align: left;
     padding-left: 30px;
     padding-right: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
     color: black;
     border-style: solid;
     border-color: #d3d3d3;
+}
+
+.logo {
+    background-color: #d3d3d3;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    height: 200px;
+    margin:auto;
+    position: relative;
 }
 

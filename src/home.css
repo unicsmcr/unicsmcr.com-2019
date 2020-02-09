@@ -1,0 +1,17 @@
+.divBlack, .divPurple {
+    width: 100vw;
+    position: relative;
+    margin-left: -50vw;
+    left: 50%;
+    font-family: "Nexa Light";
+}
+
+.divBlack {
+    background-color:black;
+    height:600px
+}
+
+.divPurple {
+    background-color:#350B4D;
+    height:600px
+}

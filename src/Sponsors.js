@@ -4,16 +4,7 @@ import gt_logo from './assets/gt_logo.png'
 //find non-copyright??
 import './font.css';
 import './sponsors.css';
-import styled from 'styled-components';
 
-const Logo = styled.div`
-    background-color: #d3d3d3;
-    padding-top: 5%;
-    padding-bottom: 5%;
-    height: 200px;
-    margin:auto;
-    position: relative;
-`;
 
 
 const bet_text = (
@@ -41,30 +32,29 @@ const gt_text = (
 )
 export default function Sponsors() {
     return(
-        <div>
+        <div class="sponsors">
             <h1>Our Sponsors</h1>
             <h2>Gold</h2>
-            
-            <figure>
-                <Logo>
-                    <a target="_blank" href="https://www.bet365.com/#/HO/">
+            <figure class="sponsors">
+                <div class="logo">
+                <a target="_blank" href="https://www.bet365.com/#/HO/">
                         <img src={bet365_logo}
                                 alt="" style={{height: '100%'}} />
                     </a>
-                </Logo>
+                </div>
                 <figcaption>
                     {bet_text}
                 </figcaption>
             </figure>
 
             <h2>Silver</h2>
-            <figure>
-                <Logo>
+            <figure class="sponsors">
+                <div class="logo">
                     <a target="_blank" href="https://www.gradtouch.com/register?id=TECH-SOCIETY&src=">
                         <img src={gt_logo}
                                 alt="" style={{width: '90%'}} />
                     </a>
-                </Logo>
+                </div>
                 <figcaption>
                     {gt_text}
                 </figcaption>

@@ -25,26 +25,61 @@ const aboutUs = (
          or been programming for years, you will never be bored at our events. And if you still aren’t convinced, 
          we have free pizza (and occasionally drinks). </p>
 )
-export default function Home() {
-    return(
-        <div>
-            <div class="divBlack">
-                <Header style={{fontSize:"5em"}}>Uni<span style={{color:"yellow"}}>CS</span></Header>
-                <h2 style={{textAlign:"center", color:"white"}}>University of Manchester</h2>
-                <h2 style={{textAlign:"center", color:"white", lineHeight:"50%"}}>Computer Science Society</h2>
-            </div>
-                
-            <div class="divPurple">
-                <Header>About Us</Header>
-                <h2 style={{color:"white", fontSize:"1.5em", paddingLeft: "70px", paddingRight: "70px"}}>{aboutUs}</h2>
-            </div>
+export default class Home extends React.Component {
 
-            <div class="divBlack">
-                <Header>Meet The Team</Header>
+    render() {
+        return(
+            <div>
+                <div class="divBlack">
+                    <Header style={{fontSize:"5em"}}>Uni<span style={{color:"yellow"}}>CS</span></Header>
+                    <h2 style={{textAlign:"center", color:"white"}}>University of Manchester</h2>
+                    <h2 style={{textAlign:"center", color:"white", lineHeight:"50%"}}>Computer Science Society</h2>
+                </div>
+                    
+                <div class="divPurple">
+                    <Header>About Us</Header>
+                    <h2 style={{color:"white", fontSize:"1.5em", paddingLeft: "70px", paddingRight: "70px"}}>{aboutUs}</h2>
+                </div>
+
+                <div class="divBlack">
+                    <Header>Meet The Team</Header>
+                </div>
+                <div class="divPurple">
+                    <Header>Contact Us</Header>
+                </div>
+
+                {/* This has created the structure for the facebook events thing*/}
+                <section id="sponsors-events">
+                    <div class="row no-side-buffers">
+                        <div class="col-md-6">
+                        <h2 class="section-title">Our Events</h2>
+                        <div id="events-section" class="flex-vertical">
+                            <div class="row justify-content-center">
+                            <div id="events-list" class="col-lg-8">
+                                <div id="happening-now" class="event-subset">
+                                    <h5 class="event-subset-identifier">Happening now:</h5>
+                                    <hr class="event-subset-separator"/>
+                                    <div class="event-subset-list"></div>
+                                </div>
+                                <div id="upcoming" class="event-subset">
+                                    <h5 class="event-subset-identifier">Upcoming events:</h5>
+                                    <hr class="event-subset-separator"/>
+                                    <div class="event-subset-list"></div>
+                                </div>
+                                <div id="past">
+                                    <h5 class="event-subset-identifier">Past events:</h5>
+                                    <hr class="event-subset-separator"/>
+                                    <div class="event-subset-list"></div>
+                                </div>
+                            </div>
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </section>
+
+
             </div>
-            <div class="divPurple">
-                <Header>Contact Us</Header>
-            </div>
-        </div>
-    )
+        )
+    }
 }

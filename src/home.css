@@ -4,14 +4,14 @@
     margin-left: -50vw;
     left: 50%;
     font-family: "Nexa Light";
+    min-height:600px;
+    padding-bottom: 20px;
 }
 
 .divBlack {
     background-color:black;
-    height:600px
 }
 
 .divPurple {
     background-color:#350B4D;
-    height:600px
 }

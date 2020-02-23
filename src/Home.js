@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './font.css';
 import './home.css';
+import user from './assets/user.png';
 
 const Header = styled.div`
     color:white;
@@ -30,6 +31,7 @@ export default class Home extends React.Component {
     render() {
         return(
             <div>
+            <body id="home-page">
                 <div class="divBlack">
                     <Header style={{fontSize:"5em"}}>Uni<span style={{color:"yellow"}}>CS</span></Header>
                     <h2 style={{textAlign:"center", color:"white"}}>University of Manchester</h2>
@@ -43,6 +45,87 @@ export default class Home extends React.Component {
 
                 <div class="divBlack">
                     <Header>Meet The Team</Header>
+                    <div class="grid-container">
+                        <div class="grid-item">
+                            <img class="team-pic" src={user} alt="team-1"/>
+                            <figcaption class="text">
+                                <h4>Sara Caballero Bruno</h4>
+                                <h5>Co-Chair</h5>
+                            </figcaption>
+                        </div>
+                        <div class="grid-item">
+                            <img class="team-pic" src={user} alt="team-1"/>
+                            <figcaption class="text">
+                                <h4>Raluca Lazarescu</h4>
+                                {/* font doesn't support the accents in her name */}
+                                <h5>Co-Chair</h5>
+                            </figcaption>
+                        </div>
+                        <div class="grid-item">
+                            <img class="team-pic" src={user} alt="team-1"/>
+                            <figcaption class="text">
+                                <h4>Aakash Kalantre</h4>
+                                <h5>Treasurer</h5>
+                            </figcaption>
+                        </div>
+                        <div class="grid-item">
+                            <img class="team-pic" src={user} alt="team-1"/>
+                            <figcaption class="text">
+                                <h4>Joana Cruz</h4>
+                                <h5>Secretary</h5>
+                            </figcaption>
+                        </div>
+                        <div class="grid-item">
+                            <img class="team-pic" src={user} alt="team-1"/>
+                            <figcaption class="text">
+                                <h4>Theodore Aaron</h4>
+                                <h5>Game Dev Officer</h5>
+                            </figcaption>
+                        </div>
+
+                        <div class="grid-item">
+                            <img class="team-pic" src={user} alt="team-1"/>
+                            <figcaption class="text">
+                                <h4>Jess Xue</h4>
+                                <h5>Graphics Officer</h5>
+                            </figcaption>
+                        </div>
+                        <div class="grid-item">
+                            <img class="team-pic" src={user} alt="team-1"/>
+                            <figcaption class="text">
+                                <h4>Smitha Kariapuram</h4>
+                                <h5>May Ball Officer</h5>
+                            </figcaption>
+                        </div>
+                        <div class="grid-item">
+                            <img class="team-pic" src={user} alt="team-1"/>
+                            <figcaption class="text">
+                                <h4>Nora Tuta</h4>
+                                <h5>PR Officer</h5>
+                            </figcaption>
+                        </div>
+                        <div class="grid-item">
+                            <img class="team-pic" src={user} alt="team-1"/>
+                            <figcaption class="text">
+                                <h4>Simas Kuprelis</h4>
+                                <h5>Events Officer</h5>
+                            </figcaption>
+                        </div>
+                        <div class="grid-item">
+                            <img class="team-pic" src={user} alt="team-1"/>
+                            <figcaption class="text">
+                                <h4>Sean Parker</h4>
+                                <h5>Dev Officer</h5>
+                            </figcaption>
+                        </div>
+                        <div class="grid-item">
+                            <img class="team-pic" src={user} alt="team-1"/>
+                            <figcaption class="text">
+                                <h4>Mohammed Anees</h4>
+                                <h5>Procurement Officer</h5>
+                            </figcaption>
+                        </div>
+                    </div>
                 </div>
                 <div class="divPurple">
                     <Header>Contact Us</Header>
@@ -77,6 +160,8 @@ export default class Home extends React.Component {
                         </div>
                     </div>
                 </section>
+            </body>
+                
 
 
             </div>

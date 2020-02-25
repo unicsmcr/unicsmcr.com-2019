@@ -1,11 +1,12 @@
 .divBlack, .divPurple {
-    /* width: 100vw; */
+    width: 100%;
     position: relative;
     /* margin-left: -50vw;
     left: 50%; */
     font-family: "Nexa Light";
     min-height:600px;
     padding-bottom: 20px;
+    /* box-sizing: border-box; */
 }
 
 .divBlack {

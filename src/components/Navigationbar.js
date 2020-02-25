@@ -9,7 +9,10 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 // import { fab } from '@fortawesome/free-brands-svg-icons'  <-- isn't used?
 import {faFacebookSquare,faTwitterSquare, faInstagram} from '@fortawesome/free-brands-svg-icons'
 
-import { Link as link2, animateScroll as scroll} from "react-scroll";
+
+import Scroll from 'react-scroll'
+const ScrollLink = Scroll.ScrollLink
+
 
 const Styles = styled.div`
 .navbar{
@@ -49,10 +52,32 @@ export const Navigationbar = () => (
                         <Link to ="/Home">Home</Link>
                     </Nav.Link>
                 </Nav.Item>
+
+                
                 <Nav.Item>
                     <Nav.Link>
                         <Link to ="/Home">Team</Link>
                     </Nav.Link>
+
+                        
+                    {/* <Nav.Link
+                    onSelect={() => Scroll.scrollTo('team', {
+                        smooth: true,
+                        offset: -70,
+                        duration: 500,
+                    })}
+                    > Team
+                        <ScrollLink 
+                            to="team" 
+                            spy={true} 
+                            smooth={true} 
+                            duration={500} 
+                            className='team' 
+                            activeClass='active-team'
+                        >
+                            Team!!!!!!
+                        </ScrollLink>
+                    </Nav.Link> */}
                 </Nav.Item>
                 {/* ^add the ability to scroll to meet the team */}
                 <Nav.Item>
@@ -76,26 +101,9 @@ export const Navigationbar = () => (
                     </Nav.Link>
                 </Nav.Item>
                 <Nav.Item>
-                    
                     <Nav.Link>
                         <Link to = "/Contact">Contact</Link>
                     </Nav.Link>
-                    {/*                 
-                    
-                    <Nav.Link>
-                        <link2
-                            activeClass="active"
-                            to="contact"
-                            spy={true}
-                            smooth={true}
-                            offset={-70}
-                            duration={500}
-                        >Contact
-                        </link2>
-                    </Nav.Link>
-                    */}
-                    
-
                 </Nav.Item>
                 <Nav.Item>
                     <a target="_blank" href="http://www.facebook.com/unicsmanchester/" style={{ marginLeft:280, paddingLeft: 10}}>

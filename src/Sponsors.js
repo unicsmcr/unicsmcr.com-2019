@@ -42,99 +42,83 @@ const bb_text =(
 const bp_text = (
     <p>Blush and Pose Photography is a photo booth hire, photography and videography business operating throughout Greater Manchester. We service weddings, birthdays and corporate events. We pride ourselves in providing professional service and high quality results. Our photo booths are uniquely designed in Australia and are sure to leave an impression on all your guests. We offer high quality wedding photography throughout Manchester. <a target="_blank" href="https://blushandposephotography.co.uk/">https://blushandposephotography.co.uk/</a> </p>
 )
-export default function Sponsors() {
-    return(
-        <div>
-            <hr/>
-            <h1 class="titles" style={{color:"#350B4D"}}>Our Sponsors</h1>
-            <hr/>
-            <h2 class="titles">Gold</h2>
 
-            <div class="sponsors">
-                <div class="figure">
-                <a target="_blank" href="https://www.bet365.com/#/HO/">
-                        <img class="logo_img" src={bet365_logo}
-                                alt="" />
-                    </a>
-                </div>
-                <div class="caption">
-                    {bet_text}
-                </div>
-            </div>
 
-            <hr/>
+const goldSponsors = [
+    {img:bet365_logo, url:"https://www.bet365.com/#/HO/", caption:bet_text}
+]
 
-            <h2 class="titles">Silver</h2>
+const silverSponsors = [
+    {img: gt_logo, url:"https://www.gradtouch.com/register?id=TECH-SOCIETY&src=", caption:gt_text}
+]
 
-            <div class="sponsors">
-                <div class="figure">
-                    <a target="_blank" href="https://www.gradtouch.com/register?id=TECH-SOCIETY&src=">
-                        <img class="logo_img" src={gt_logo}
-                                alt="" />
-                    </a>
+const bronzeSponsors = [
+    {img:ae_logo, url: "https://careers.americanexpress.com/students", caption: ae_text},
+    {img:ms_logo, url:"https://www.morganstanley.com/people-opportunities/students-graduates", caption: ms_text},
+    {img:bb_logo, url:"https://www.bloomberg.com/europe", caption:bb_text}
+]
+
+export default class Sponsors extends React.Component {
+    makeSponsors = (array) => {
+        if(array.length > 0){
+            return array.map(function(each){
+              return(
+                <div class="sponsors">
+                    <div class="figure">
+                    <a target="_blank" href={each.url}>
+                            <img class="logo_img" src={each.img}
+                                    alt="" />
+                        </a>
+                    </div>
+                    <div class="caption">
+                        {each.caption}
+                    </div>
                 </div>
-                <div class="caption">
-                    {gt_text}
+              )
+            })
+          } else {
+            return []
+          }
+        }
+
+    render() {
+        return(
+            <div>
+                <hr/>
+                <h1 class="titles" style={{color:"#350B4D"}}>Our Sponsors</h1>
+                <hr/>
+
+                <h2 class="titles">Gold</h2>
+                {this.makeSponsors(goldSponsors)}
+                <hr/>
+    
+                <h2 class="titles">Silver</h2>
+                {this.makeSponsors(silverSponsors)}
+                <hr />
+    
+                <h2 class="titles">Bronze</h2>
+                {this.makeSponsors(bronzeSponsors)}
+                <hr />
+                
+    
+                {/* hardcoded?? */}
+                <h3 class="titles">Photobooth at the May Ball provided by:</h3>
+    
+                <div class="sponsors">
+                    <div class="figure">
+                        <a target="_blank" href="https://blushandposephotography.co.uk/">
+                            <img class="logo_img" src={bp_logo}
+                                    alt="" />
+                        </a>
+                    </div>
+                    <div class="caption">
+                        {bp_text}
+                    </div>
                 </div>
+    
+                
             </div>
             
-            <hr/>
-
-            <h2 class="titles">Bronze</h2>
-
-            <div class="sponsors">
-                <div class="figure">
-                    <a target="_blank" href="https://careers.americanexpress.com/students">
-                        <img class="logo_img" src={ae_logo}
-                                alt="" />
-                    </a>
-                </div>
-                <div class="caption">
-                    {ae_text}
-                </div>
-            </div>
-
-
-            <div class="sponsors">
-                <div class="figure">
-                    <a target="_blank" href="https://www.morganstanley.com/people-opportunities/students-graduates">
-                        <img class="logo_img" src={ms_logo}
-                                alt="" />
-                    </a>
-                </div>
-                <div class="caption">
-                    {ms_text}
-                </div>
-            </div>
-
-            <div class="sponsors">
-                <div class="figure">
-                    <a target="_blank" href="https://www.bloomberg.com/europe">
-                        <img class="logo_img" src={bb_logo}
-                                alt="" />
-                    </a>
-                </div>
-                <div class="caption">
-                    {bb_text}
-                </div>
-            </div>
-
-            <h3 class="titles">Photobooth at the May Ball provided by:</h3>
-
-            <div class="sponsors">
-                <div class="figure">
-                    <a target="_blank" href="https://blushandposephotography.co.uk/">
-                        <img class="logo_img" src={bp_logo}
-                                alt="" />
-                    </a>
-                </div>
-                <div class="caption">
-                    {bp_text}
-                </div>
-            </div>
-
-            
-        </div>
-        
-    )
+        )
+    }
 }

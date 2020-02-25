@@ -4,6 +4,9 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './font.css';
 import './home.css';
 import user from './assets/user.png';
+// have to import pic before being able to use it
+
+import { Element } from 'react-scroll'
 
 const Header = styled.div`
     color:white;
@@ -26,8 +29,39 @@ const aboutUs = (
          or been programming for years, you will never be bored at our events. And if you still aren’t convinced, 
          we have free pizza (and occasionally drinks). </p>
 )
+{/* font doesn't support the accents in Raluca's name or ff */}
+const teamMembers = [
+    {name: "Sara Caballero Bruno", role:"Co-Chair", img: user},
+    {name: "Raluca Lazarescu", role:"Co-Chair", img: user},
+    {name: "Aakash Kalantre", role:"Treasurer", img: user},
+    {name: "Joana Cruz", role:"Secretary", img: user},
+    {name: "Theodore Aaron", role:"Game Dev Officer", img: user},
+    {name: "Jess Xue", role:"Graphics Officer", img: user},
+    {name: "Smitha Kariapuram", role:"May Ball Officer", img: user},
+    {name: "Nora Tuta", role:"PR Officer", img: user},
+    {name: "Simas Kuprelis", role:"Events Officer", img: user},
+    {name: "Sean Parker", role:"Dev Officer", img: user},
+    {name: "Mohammed Anees", role:"Procurement Officer", img: user}
+    ]
 export default class Home extends React.Component {
-
+    
+    makeMembers = (array) => {
+        if(array.length > 0){
+            return array.map(function(each){
+              return(
+                <div class="grid-item">
+                    <img class="team-pic" src={each.img} alt="team-1"/>
+                    <figcaption class="text">
+                    <h4>{each.name}</h4>
+                    <h5>{each.role}</h5>
+                    </figcaption>
+                </div>
+              )
+            })
+          } else {
+            return []
+          }
+        }
     render() {
         return(
             <div>
@@ -43,90 +77,14 @@ export default class Home extends React.Component {
                     <h2 style={{color:"white", fontSize:"1.5em", paddingLeft: "70px", paddingRight: "70px"}}>{aboutUs}</h2>
                 </div>
 
-                <div class="divBlack">
+                <div class="divBlack" id="team">
+                    
                     <Header>Meet The Team</Header>
                     <div class="grid-container">
-                        <div class="grid-item">
-                            <img class="team-pic" src={user} alt="team-1"/>
-                            <figcaption class="text">
-                                <h4>Sara Caballero Bruno</h4>
-                                <h5>Co-Chair</h5>
-                            </figcaption>
-                        </div>
-                        <div class="grid-item">
-                            <img class="team-pic" src={user} alt="team-1"/>
-                            <figcaption class="text">
-                                <h4>Raluca Lazarescu</h4>
-                                {/* font doesn't support the accents in her name */}
-                                <h5>Co-Chair</h5>
-                            </figcaption>
-                        </div>
-                        <div class="grid-item">
-                            <img class="team-pic" src={user} alt="team-1"/>
-                            <figcaption class="text">
-                                <h4>Aakash Kalantre</h4>
-                                <h5>Treasurer</h5>
-                            </figcaption>
-                        </div>
-                        <div class="grid-item">
-                            <img class="team-pic" src={user} alt="team-1"/>
-                            <figcaption class="text">
-                                <h4>Joana Cruz</h4>
-                                <h5>Secretary</h5>
-                            </figcaption>
-                        </div>
-                        <div class="grid-item">
-                            <img class="team-pic" src={user} alt="team-1"/>
-                            <figcaption class="text">
-                                <h4>Theodore Aaron</h4>
-                                <h5>Game Dev Officer</h5>
-                            </figcaption>
-                        </div>
-
-                        <div class="grid-item">
-                            <img class="team-pic" src={user} alt="team-1"/>
-                            <figcaption class="text">
-                                <h4>Jess Xue</h4>
-                                <h5>Graphics Officer</h5>
-                            </figcaption>
-                        </div>
-                        <div class="grid-item">
-                            <img class="team-pic" src={user} alt="team-1"/>
-                            <figcaption class="text">
-                                <h4>Smitha Kariapuram</h4>
-                                <h5>May Ball Officer</h5>
-                            </figcaption>
-                        </div>
-                        <div class="grid-item">
-                            <img class="team-pic" src={user} alt="team-1"/>
-                            <figcaption class="text">
-                                <h4>Nora Tuta</h4>
-                                <h5>PR Officer</h5>
-                            </figcaption>
-                        </div>
-                        <div class="grid-item">
-                            <img class="team-pic" src={user} alt="team-1"/>
-                            <figcaption class="text">
-                                <h4>Simas Kuprelis</h4>
-                                <h5>Events Officer</h5>
-                            </figcaption>
-                        </div>
-                        <div class="grid-item">
-                            <img class="team-pic" src={user} alt="team-1"/>
-                            <figcaption class="text">
-                                <h4>Sean Parker</h4>
-                                <h5>Dev Officer</h5>
-                            </figcaption>
-                        </div>
-                        <div class="grid-item">
-                            <img class="team-pic" src={user} alt="team-1"/>
-                            <figcaption class="text">
-                                <h4>Mohammed Anees</h4>
-                                <h5>Procurement Officer</h5>
-                            </figcaption>
-                        </div>
+                        {this.makeMembers(teamMembers)}
                     </div>
                 </div>
+
                 <div class="divPurple">
                     <Header>Contact Us</Header>
                 </div>

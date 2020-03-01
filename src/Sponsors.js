@@ -79,30 +79,30 @@ export default class Sponsors extends React.Component {
           } else {
             return []
           }
-        }
+    }
 
     render() {
         return(
             <div>
                 <hr/>
-                <h1 class="titles" style={{color:"#350B4D"}}>Our Sponsors</h1>
+                <h1 class="titles-sponsors" style={{color:"#350B4D"}}>Our Sponsors</h1>
                 <hr/>
 
-                <h2 class="titles">Gold</h2>
+                <h2 class="titles-sponsors">Gold</h2>
                 {this.makeSponsors(goldSponsors)}
                 <hr/>
     
-                <h2 class="titles">Silver</h2>
+                <h2 class="titles-sponsors">Silver</h2>
                 {this.makeSponsors(silverSponsors)}
                 <hr />
     
-                <h2 class="titles">Bronze</h2>
+                <h2 class="titles-sponsors">Bronze</h2>
                 {this.makeSponsors(bronzeSponsors)}
                 <hr />
                 
     
                 {/* hardcoded?? */}
-                <h3 class="titles">Photobooth at the May Ball provided by:</h3>
+                <h3 class="titles-sponsors">Photobooth at the May Ball provided by:</h3>
     
                 <div class="sponsors">
                     <div class="figure">

@@ -49,8 +49,8 @@ export default class Home extends React.Component {
         if(array.length > 0){
             return array.map(function(each){
               return(
-                <div class="grid-item">
-                    <img class="team-pic" src={each.img} alt="team-1"/>
+                <div class="grid-item-home">
+                    <img class="team-pic" src={each.img} alt=""/>
                     <figcaption class="text">
                     <h4>{each.name}</h4>
                     <h5>{each.role}</h5>
@@ -58,10 +58,10 @@ export default class Home extends React.Component {
                 </div>
               )
             })
-          } else {
-            return []
-          }
+        } else {
+        return []
         }
+    }
     render() {
         return(
             <div>
@@ -80,7 +80,7 @@ export default class Home extends React.Component {
                 <div class="divBlack" id="team">
                     
                     <Header>Meet The Team</Header>
-                    <div class="grid-container">
+                    <div class="grid-container-home">
                         {this.makeMembers(teamMembers)}
                     </div>
                 </div>

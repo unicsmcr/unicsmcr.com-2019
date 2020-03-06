@@ -35,9 +35,8 @@ export default class Contact extends React.Component {
 		const email = this.state;
 
 		return (
-		<div className="App">
-			<div style={{ marginTop: 10 }} >
-			<h2> Send Email </h2>
+		<div>
+			<h2>Contact Us</h2>
 			<input
 				name="email"
 				onChange={this.handleChange}
@@ -52,6 +51,7 @@ export default class Contact extends React.Component {
 				placeholder="Name (optional)"
 				value={email.name}
 			/>
+
 			<textarea
 				name="message"
 				onChange={this.handleChange}
@@ -63,7 +63,6 @@ export default class Contact extends React.Component {
 
 			<button onClick={this.sendEmail}> Send Email </button>
 
-			</div>
 		</div>
 		);
   }

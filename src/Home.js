@@ -29,7 +29,7 @@ const aboutUs = (
          or been programming for years, you will never be bored at our events. And if you still aren’t convinced, 
          we have free pizza (and occasionally drinks). </p>
 )
-{/* font doesn't support the accents in Raluca's name or ff */}
+
 const teamMembers = [
     {name: "Sara Caballero Bruno", role:"Co-Chair", img: user},
     {name: "Raluca Lazarescu", role:"Co-Chair", img: user},

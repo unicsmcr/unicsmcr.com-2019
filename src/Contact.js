@@ -37,29 +37,41 @@ export default class Contact extends React.Component {
 		return (
 		<div>
 			<h2>Contact Us</h2>
-			<input
-				name="email"
-				onChange={this.handleChange}
-				placeholder="Email Address"
-				required
-				value={email.sender}
-			/>
-			
-			<input
-				name="name"
-				onChange={this.handleChange}
-				placeholder="Name (optional)"
-				value={email.name}
-			/>
-
-			<textarea
-				name="message"
-				onChange={this.handleChange}
-				placeholder="Your message"
-				required
-				value={email.text}
-				style={{width: '100%', height: '150px'}}
-			/>
+			<form>
+				<div class="row">
+					<div class="form-group col-md-6 col-sm-12">
+						<input
+						class="form-control"
+						name="email"
+						onChange={this.handleChange}
+						placeholder="Email Address"
+						required
+						value={email.sender}
+						/>
+					</div>
+					<div class="form-group col-md-6 col-sm-12">
+						<input
+						class="form-control"
+						name="name"
+						onChange={this.handleChange}
+						placeholder="Name (optional)"
+						value={email.name}
+						/>
+					</div>
+				</div>
+				
+				<div class="form-group">
+					<textarea
+					class="form-control"
+					name="message"
+					onChange={this.handleChange}
+					placeholder="Your message"
+					required
+					value={email.text}
+					style={{width: '100%', height: '150px'}}
+					/>
+				</div>
+			</form>
 
 			<button onClick={this.sendEmail}> Send Email </button>
 

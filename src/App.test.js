@@ -8,5 +8,5 @@ it('renders without crashing', () => {
   ReactDOM.unmountComponentAtNode(div);
 });
 
-// const Func = () => {code...} is an anonymous function 
+// const Func = () => {code...} is an anonymous function
 // it allows us to create and use a function without giving it a name

@@ -1,35 +1,27 @@
 .titles-sponsors {
-    text-align: center;
-    font-family: "Nexa Light";
+  text-align: center;
 }
 
 .logo_img {
-    width: 90%;
+  width: 90%;
 }
 
-
 .figure {
-    margin:auto;
+  margin: auto;
 }
 
 .caption {
-    text-align: left;
-    color: black;
-    font-family: "Nexa Light";
-    border-style: solid;
-    border-color: #d3d3d3;
-    padding: 2%;
+  text-align: left;
+  color: black;
+  border-style: solid;
+  border-color: #d3d3d3;
+  padding: 2%;
 }
 
 .sponsors {
-    display: grid;
-    grid-template-columns:15% 85%;
-    grid-gap: 10px;
-    background-color: white;
-    padding: 20px;
+  display: grid;
+  grid-template-columns: 15% 85%;
+  grid-gap: 10px;
+  background-color: white;
+  padding: 20px;
 }
-
-
-
-
-

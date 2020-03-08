@@ -1,86 +1,84 @@
 // contact@hacksoc.com
 import React from 'react';
 
-
 export default class Contact extends React.Component {
-	constructor(props) {
-		super(props);
-		this.state = {
-			recipient: 'ayeshakhtar24@gmail.com',
-			sender: '',
-			name: '',
-			subject: 'UniCS Contact Form',
-			text: ''
-		};
-		this.handleChange = this.handleChange.bind(this);
-		this.sendEmail = this.sendEmail.bind(this);
-		}
+  constructor(props) {
+    super(props);
+    this.state = {
+      recipient: 'ayeshakhtar24@gmail.com',
+      sender: '',
+      name: '',
+      subject: 'UniCS Contact Form',
+      text: '',
+    };
+    this.handleChange = this.handleChange.bind(this);
+    this.sendEmail = this.sendEmail.bind(this);
+  }
 
-	handleChange(event) {
-		const target = event.target;
-		const value = target.value;
-		const name = target.name;
+  handleChange(event) {
+    const target = event.target;
+    const value = target.value;
+    const name = target.name;
 
-		this.setState({
-			[name]: value
-		});
-	}
-	sendEmail = _ => {
-		const email = this.state;
-		fetch(`http://127.0.0.1:4000/send-email?recipient=${email.recipient}&sender=${email.sender}&topic=${email.subject}&text=${email.text}`) //query string url
-			.catch(err => console.error(err))
-	}
+    this.setState({
+      [name]: value,
+    });
+  }
+  sendEmail = _ => {
+    const email = this.state;
+    fetch(
+      `http://127.0.0.1:4000/send-email?recipient=${email.recipient}&sender=${email.sender}&topic=${email.subject}&text=${email.text}`,
+    ) //query string url
+      .catch(err => console.error(err));
+  };
 
-  	render() {
-		const email = this.state;
+  render() {
+    const email = this.state;
 
-		return (
-		<div>
-			<h2>Contact Us</h2>
-			<form>
-				<div class="row">
-					<div class="form-group col-md-6 col-sm-12">
-						<input
-						class="form-control"
-						name="email"
-						onChange={this.handleChange}
-						placeholder="Email Address"
-						required
-						value={email.sender}
-						/>
-					</div>
-					<div class="form-group col-md-6 col-sm-12">
-						<input
-						class="form-control"
-						name="name"
-						onChange={this.handleChange}
-						placeholder="Name (optional)"
-						value={email.name}
-						/>
-					</div>
-				</div>
-				
-				<div class="form-group">
-					<textarea
-					class="form-control"
-					name="message"
-					onChange={this.handleChange}
-					placeholder="Your message"
-					required
-					value={email.text}
-					style={{width: '100%', height: '150px'}}
-					/>
-				</div>
-			</form>
+    return (
+      <div>
+        <h2>Contact Us</h2>
+        <form>
+          <div class="row">
+            <div class="form-group col-md-6 col-sm-12">
+              <input
+                class="form-control"
+                name="email"
+                onChange={this.handleChange}
+                placeholder="Email Address"
+                required
+                value={email.sender}
+              />
+            </div>
+            <div class="form-group col-md-6 col-sm-12">
+              <input
+                class="form-control"
+                name="name"
+                onChange={this.handleChange}
+                placeholder="Name (optional)"
+                value={email.name}
+              />
+            </div>
+          </div>
 
-			<button onClick={this.sendEmail}> Send Email </button>
+          <div class="form-group">
+            <textarea
+              class="form-control"
+              name="message"
+              onChange={this.handleChange}
+              placeholder="Your message"
+              required
+              value={email.text}
+              style={{ width: '100%', height: '150px' }}
+            />
+          </div>
+        </form>
 
-		</div>
-		);
+        <button onClick={this.sendEmail}> Send Email </button>
+      </div>
+    );
   }
 }
-
-
 
 // export default class Contact extends React.Component {
 //   constructor(props) {

@@ -1,49 +1,42 @@
-/* div.container {
-    max-width: none;
-    padding: 0 0 0 0;
-} */
+div.container {
+  max-width: none;
+  padding: 0 0 0 0;
+}
 
 .divBlack,
 .divPurple {
-    width: 100%;
-    position: relative;
-    /* margin-left: -50vw;
-    left: 50%; */
-    font-family: "Nexa Light";
-    min-height: 600px;
-    /* height: 90vh; */
-    padding-bottom: 20px;
-    /* box-sizing: border-box; */
+  width: 100%;
+  position: relative;
+  min-height: 50vh;
+  padding-bottom: 20px;
 }
 
 .divBlack {
-    background-color: black;
+  background-color: black;
 }
-
 
 .divPurple {
-    background-color: #350B4D;
+  background-color: #350b4d;
 }
 
-
 .team-pic {
-    width: 200px;
-    border-radius: 50%;
-    padding: 10px;
+  width: 200px;
+  border-radius: 50%;
+  padding: 10px;
 }
 
 .grid-container-home {
-    display: grid;
-    grid-gap: 5px;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    grid-template-rows: repeat(2, 300px);
+  display: grid;
+  grid-gap: 5px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-rows: repeat(2, 300px);
 }
 
 .grid-item-home {
-    padding: 20px;
-    text-align: center;
+  padding: 20px;
+  text-align: center;
 }
 
 .text {
-    color: white;
+  color: white;
 }

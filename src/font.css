@@ -1,9 +1,13 @@
 @font-face {
-    font-family: Nexa Bold;
-    src: url("./font/nexa-bold-webfont.woff");
-}
+  font-family: 'Nexa';
+  font-style: normal;
+  font-weight: 400;
+  src: url('font/nexa/nexa-regular-webfont.eot');
 
-@font-face {
-    font-family: Nexa Light;
-    src: url("./font/nexa-light-webfont.woff");
+  src: url('font/nexa/nexa-regular-webfont.eot?#iefix')
+      format('embedded-opentype'),
+    url('font/nexa/nexa-regular-webfont.woff2') format('woff2'),
+    url('font/nexa/nexa-regular-webfont.woff') format('woff'),
+    url('font/nexa/nexa-regular-webfont.ttf') format('truetype'),
+    url('font/nexa/nexa-regular-webfont.svg#OpenSans') format('svg');
 }

@@ -7,7 +7,7 @@ import ms_logo from '../assets/ms_logo.png';
 import bp_logo from '../assets/bp_logo.png';
 
 import '../font.css';
-import './sponsors.css';
+import './Sponsors.css';
 
 const bet_text = (
   <p>
@@ -22,7 +22,7 @@ const bet_text = (
     is essential to our success. Our award winning business has worked hard to
     cultivate a culture of creativity where good ideas and a techno
     entrepreneurial attitude are encouraged and rewarded. Today we continue to
-    push technological boundaries and break new ground in software innovation.{' '}
+    push technological boundaries and break new ground in software innovation.
   </p>
 );
 
@@ -64,7 +64,7 @@ const ms_text = (
     first-class way. This means we help our clients create value by steering
     capital to fuel innovation and advance ideas that bring markets, communities
     and causes to life. We stand on 80 years of thoughtful investing, our rich
-    heritage shaping our vision for the future.{' '}
+    heritage shaping our vision for the future.
   </p>
 );
 
@@ -88,7 +88,7 @@ const bp_text = (
     weddings, birthdays and corporate events. We pride ourselves in providing
     professional service and high quality results. Our photo booths are uniquely
     designed in Australia and are sure to leave an impression on all your
-    guests. We offer high quality wedding photography throughout Manchester.{' '}
+    guests. We offer high quality wedding photography throughout Manchester.
     <a target="_blank" href="https://blushandposephotography.co.uk/">
       https://blushandposephotography.co.uk/
     </a>

@@ -8,7 +8,7 @@ import sh_2017 from '../assets/sh_2017.jpg';
 import guh_2016 from '../assets/guh_2016.jpg';
 import sh_2016 from '../assets/sh_2016.jpg';
 import '../font.css';
-import './gallery.css';
+import './Gallery.css';
 
 const folders = [
   {

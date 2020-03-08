@@ -1,5 +1,5 @@
 {
-  "name": "react-bootstrap1",
+  "name": "unics-website",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -9,14 +9,11 @@
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
     "@fortawesome/react-fontawesome": "^0.1.7",
     "@sendgrid/mail": "^6.5.4",
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "nodemon": "^2.0.2",
     "react": "^16.12.0",
     "react-bootstrap": "^1.0.0-beta.17",
     "react-dom": "^16.12.0",
     "react-router-dom": "^5.1.2",
-    "react-scripts": "3.2.0",
+    "react-scripts": "^3.4.0",
     "react-scroll": "^1.7.16",
     "styled-components": "^4.4.1"
   },

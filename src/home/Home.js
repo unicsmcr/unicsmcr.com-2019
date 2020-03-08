@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import '../font.css';
-import './home.css';
+import './Home.css';
 import aboutus from './aboutus/aboutus';
 import user from '../assets/user.png';
 

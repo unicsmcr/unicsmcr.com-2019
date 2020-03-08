@@ -13,8 +13,8 @@ import {
   faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
 
-import Scroll from 'react-scroll';
-const ScrollLink = Scroll.ScrollLink;
+// import Scroll from 'react-scroll';
+// const ScrollLink = Scroll.ScrollLink;
 
 const Styles = styled.div`
   .navbar {
@@ -117,6 +117,7 @@ export const Navigationbar = () => (
           <Nav.Item>
             <a
               target="_blank"
+              rel="noopener noreferrer"
               href="http://www.facebook.com/unicsmanchester/"
               style={{ marginLeft: 280, paddingLeft: 10 }}
             >
@@ -125,12 +126,12 @@ export const Navigationbar = () => (
                 size="2x"
                 color="#AC6FC6"
               />
-              {/*How to change the background color to white and copyright issue!!!*/}
             </a>
           </Nav.Item>
           <Nav.Item>
             <a
               target="_blank"
+              rel="noopener noreferrer"
               href="https://twitter.com/unics_uom"
               style={{ paddingLeft: 10 }}
             >
@@ -144,6 +145,7 @@ export const Navigationbar = () => (
           <Nav.Item>
             <a
               target="_blank"
+              rel="noopener noreferrer"
               href="https://www.instagram.com/unics_uom/"
               style={{ paddingLeft: 10 }}
             >

@@ -1,9 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
-import './font.css';
+import '../font.css';
 import './home.css';
-import aboutus from './assets/about/aboutus';
-import user from './assets/user.png';
+import aboutus from './aboutus/aboutus';
+import user from '../assets/user.png';
 
 const Header = styled.div`
   color: white;

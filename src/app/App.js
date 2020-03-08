@@ -1,14 +1,14 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
-import Home from './Home';
-import Jobs from './Jobs';
-import Gallery from './Gallery';
-import Sponsors from './Sponsors';
-import JoinUs from './JoinUs';
-import Contact from './Contact';
-import NoMatch from './NoMatch';
-import { Layout } from './components/Layout';
-import { Navigationbar } from './components/Navigationbar';
+import Home from '../home/Home';
+import Jobs from '../jobs/Jobs';
+import Gallery from '../gallery/Gallery';
+import Sponsors from '../sponsors/Sponsors';
+import JoinUs from '../joinus/JoinUs';
+import Contact from '../contact/Contact';
+import NoMatch from '../NoMatch';
+import { Layout } from '../components/Layout';
+import { Navigationbar } from '../components/Navigationbar';
 
 function App() {
   return (

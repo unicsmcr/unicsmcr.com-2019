@@ -1,13 +1,13 @@
 import React from 'react';
-import guh_2019 from './assets/guh_2019.jpg';
-import sh_2019 from './assets/sh_2019.jpg';
-import guh_2018 from './assets/guh_2018.jpg';
-import sh_2018 from './assets/sh_2018.jpg';
-import guh_2017 from './assets/guh_2017.jpg';
-import sh_2017 from './assets/sh_2017.jpg';
-import guh_2016 from './assets/guh_2016.jpg';
-import sh_2016 from './assets/sh_2016.jpg';
-import './font.css';
+import guh_2019 from '../assets/guh_2019.jpg';
+import sh_2019 from '../assets/sh_2019.jpg';
+import guh_2018 from '../assets/guh_2018.jpg';
+import sh_2018 from '../assets/sh_2018.jpg';
+import guh_2017 from '../assets/guh_2017.jpg';
+import sh_2017 from '../assets/sh_2017.jpg';
+import guh_2016 from '../assets/guh_2016.jpg';
+import sh_2016 from '../assets/sh_2016.jpg';
+import '../font.css';
 import './gallery.css';
 
 const folders = [

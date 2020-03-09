@@ -9,7 +9,10 @@ exports.handler = async (event, _context) => {
   let response;
   const url = `${API_ENDPOINT}&access_token=${process.env.FB_ACCESS_TOKEN}`;
   try {
-    response = await fetch(url, { method: 'GET' });
+    response = await fetch(url, {
+      method: 'GET',
+      headers: { Accept: 'application/json' },
+    });
   } catch (err) {
     console.log(err);
     return {

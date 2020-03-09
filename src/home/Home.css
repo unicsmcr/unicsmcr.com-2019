@@ -3,19 +3,19 @@ div.container {
   padding: 0 0 0 0;
 }
 
-.divBlack,
-.divPurple {
+.section-black,
+.section-purple {
   width: 100%;
   position: relative;
   min-height: 50vh;
   padding-bottom: 20px;
 }
 
-.divBlack {
+.section-black {
   background-color: black;
 }
 
-.divPurple {
+.section-purple {
   background-color: #350b4d;
 }
 

@@ -51,7 +51,7 @@ export default class Home extends React.Component {
   render() {
     return (
       <div id="home-page">
-        <div className="divBlack">
+        <div className="section-black">
           <Header style={{ fontSize: '5em' }}>
             Uni<span style={{ color: 'yellow' }}>CS</span>
           </Header>
@@ -68,7 +68,7 @@ export default class Home extends React.Component {
           </h2>
         </div>
 
-        <div className="divPurple">
+        <div className="section-purple">
           <Header>About Us</Header>
           <AboutUs>
             {aboutus.map((element, id) => (
@@ -77,13 +77,17 @@ export default class Home extends React.Component {
           </AboutUs>
         </div>
 
-        <div className="divBlack" id="team">
+        <div className="section-black" id="team">
           <Header>Meet The Team</Header>
           <MemberList teamMembers={teamMembers} />
         </div>
 
-        <div className="divPurple">
+        <div className="section-purple">
           <Header>Contact Us</Header>
+        </div>
+
+        <div className="section-black">
+          <Header>Events</Header>
         </div>
       </div>
     );

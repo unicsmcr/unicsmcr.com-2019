@@ -16,7 +16,7 @@ const Header = styled.div`
 const AboutUs = styled.div`
   color: white;
   font-size: 2vw;
-  padding: 0 50px 0 50px;
+  padding: 20px 10% 20px 10%;
 `;
 
 const teamMembers = [

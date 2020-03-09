@@ -23,5 +23,5 @@
   grid-template-columns: 15% 85%;
   grid-gap: 10px;
   background-color: white;
-  padding: 20px;
+  padding: 20px 10% 20px 10%;
 }

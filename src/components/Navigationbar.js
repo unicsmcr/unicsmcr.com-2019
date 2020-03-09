@@ -26,8 +26,8 @@ const Styles = styled.div`
   .navbar-nav,
   .nav-link {
     text-decoration: none;
-    padding-left: 20px;
-    font-size: 16px;
+    padding-left: 15px;
+    font-size: 18px;
     color: #faf9fe;
   }
 
@@ -91,11 +91,6 @@ export const Navigationbar = () => (
           {/* ^add the ability to scroll to meet the team */}
           <Nav.Item>
             <Nav.Link>
-              <Link to="/Jobs">Jobs</Link>
-            </Nav.Link>
-          </Nav.Item>
-          <Nav.Item>
-            <Nav.Link>
               <Link to="/Gallery">Gallery</Link>
             </Nav.Link>
           </Nav.Item>
@@ -114,44 +109,24 @@ export const Navigationbar = () => (
               <Link to="/Contact">Contact</Link>
             </Nav.Link>
           </Nav.Item>
-          <Nav.Item>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="http://www.facebook.com/unicsmanchester/"
-              style={{ marginLeft: 280, paddingLeft: 10 }}
-            >
-              <FontAwesomeIcon
-                icon={faFacebookSquare}
-                size="2x"
-                color="#AC6FC6"
-              />
-            </a>
-          </Nav.Item>
-          <Nav.Item>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://twitter.com/unics_uom"
-              style={{ paddingLeft: 10 }}
-            >
-              <FontAwesomeIcon
-                icon={faTwitterSquare}
-                size="2x"
-                color="#AC6FC6"
-              />
-            </a>
-          </Nav.Item>
-          <Nav.Item>
-            <a
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.instagram.com/unics_uom/"
-              style={{ paddingLeft: 10 }}
-            >
-              <FontAwesomeIcon icon={faInstagram} size="2x" color="#AC6FC6" />
-            </a>
-          </Nav.Item>
+        </Nav>
+        <Nav className="ml-auto">
+            <Nav.Item>
+                <a target="_blank" href="http://www.facebook.com/unicsmanchester/">
+                    <FontAwesomeIcon icon={faFacebookSquare} size="2x" color="#AC6FC6"/>
+                    {/*How to change the background color to white and copyright issue!!!*/}
+                </a>   
+            </Nav.Item>
+            <Nav.Item>
+                <a target="_blank" href="https://twitter.com/unics_uom">
+                    <FontAwesomeIcon icon={faTwitterSquare} size="2x" color="#AC6FC6" />
+                </a>
+            </Nav.Item>
+            <Nav.Item>
+                <a target="_blank" href="https://www.instagram.com/unics_uom/" style={{ paddingRight: 10}}>
+                    <FontAwesomeIcon icon={faInstagram} size="2x" color="#AC6FC6"/>
+                </a>
+            </Nav.Item>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

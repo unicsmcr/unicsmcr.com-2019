@@ -1,7 +1,6 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Home from '../home/Home';
-import Jobs from '../jobs/Jobs';
 import Gallery from '../gallery/Gallery';
 import Sponsors from '../sponsors/Sponsors';
 import JoinUs from '../joinus/JoinUs';
@@ -18,7 +17,6 @@ function App() {
         <Layout>
           <Switch>
             <Route exact path={['/', 'home']} component={Home} />
-            <Route path="/jobs" component={Jobs} />
             <Route path="/gallery" component={Gallery} />
             <Route path="/sponsors" component={Sponsors} />
             <Route path="/joinus" component={JoinUs} />

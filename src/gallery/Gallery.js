@@ -60,7 +60,7 @@ export default class Home extends React.Component {
           <div>
             <a target="_blank" href={each.url} class="grid-link-gallery">
               <img
-                class="grid-item-gallery"
+                class="grid-item-gallery rounded"
                 src={each.thumbnail}
                 alt="Gallery Folder"
               />
@@ -80,7 +80,7 @@ export default class Home extends React.Component {
     return (
       <div>
         <hr />
-        <h1 style={{ textAlign: 'center' }}>Gallery Page</h1>
+        <h1 style={{ textAlign: 'center' }} class="display-4">Gallery Page</h1>
         <hr />
         <div class="grid-container-gallery">{this.makeThumbnail(folders)}</div>
       </div>

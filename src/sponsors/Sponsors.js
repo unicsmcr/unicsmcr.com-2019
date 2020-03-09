@@ -146,7 +146,7 @@ export default class Sponsors extends React.Component {
     return (
       <div>
         <hr />
-        <h1 class="titles-sponsors" style={{ color: '#350B4D' }}>
+        <h1 class="titles-sponsors display-4" style={{ color: '#350B4D' }}>
           Our Sponsors
         </h1>
         <hr />

@@ -3,6 +3,7 @@
   grid-gap: 5px;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   grid-template-rows: repeat(2, 300px);
+  padding: 0 10% 0 10%;
 }
 
 .grid-item-gallery {

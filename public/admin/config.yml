@@ -1,0 +1,52 @@
+backend:
+  name: github
+  repo: unicsmcr/netlify-cms
+  squash_merges: true
+
+media_folder: 'public/images'
+public_folder: 'images'
+
+collections:
+  - name: 'people'
+    label: 'People'
+    folder: src/content/about-us
+    extension: json
+    format: json
+    create: true
+    fields:
+      - { name: title, label: Name }
+      - { name: position, label: Position }
+      - { name: committee, label: Committee, widget: boolean, required: false }
+      - {
+          name: order,
+          label: Order,
+          widget: number,
+          min: 0,
+          valueType: 'string',
+          required: true,
+        }
+      - { name: img_href, label: Image URL, required: false, default: null }
+  - name: 'blog'
+    label: 'Blog Posts'
+    folder: src/content/blog
+    slug: '{{year}}-{{month}}-{{day}}_{{slug}}'
+    create: true
+    fields:
+      - { name: title, label: Title }
+      - {
+          name: titleBackground,
+          label: Title Background (URL),
+          required: false,
+        }
+      - { name: type, widget: hidden, default: blog }
+      - { name: date, label: Date, widget: date }
+      - {
+          name: author,
+          label: Author,
+          widget: relation,
+          collection: people,
+          searchFields: [title, position],
+          valueField: title,
+          displayFields: [title, position],
+        }
+      - { name: body, label: Body, widget: markdown }

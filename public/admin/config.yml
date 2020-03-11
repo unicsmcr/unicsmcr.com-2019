@@ -1,6 +1,7 @@
 backend:
   name: github
-  repo: unicsmcr/netlify-cms
+  repo: unicsmcr/unicsmcr.com
+  branch: netlify-cms
   squash_merges: true
 
 media_folder: 'public/images'

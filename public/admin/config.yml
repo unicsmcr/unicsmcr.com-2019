@@ -1,7 +1,6 @@
 backend:
   name: github
   repo: unicsmcr/unicsmcr.com
-  branch: netlify-cms
   squash_merges: true
 
 publish_mode: editorial_workflow
@@ -11,7 +10,7 @@ public_folder: 'images'
 collections:
   - name: 'people'
     label: 'People'
-    folder: src/content/people
+    folder: src/assets/people
     extension: json
     format: json
     create: true
@@ -26,26 +25,22 @@ collections:
           valueType: 'string',
           required: true,
         }
-      - { name: img_href, label: Image URL, required: false, default: null }
+      - { name: image, label: 'team photo', widget: image }
   - name: 'blog'
     label: 'Blog Posts'
-    folder: src/content/blog
+    folder: src/assets/blog
     slug: '{{year}}-{{month}}-{{day}}_{{slug}}'
     create: true
     fields:
       - { name: title, label: Title }
-      - {
-          name: titleBackground,
-          label: Title Background (URL),
-          required: false,
-        }
+      - { name: titleBackground, label: 'post background photo', widget: image }
       - { name: type, widget: hidden, default: blog }
       - { name: date, label: Date, widget: date }
       - {
           name: author,
           label: Author,
           widget: relation,
-          collection: people,
+          collection: 'people',
           searchFields: [title, position],
           valueField: title,
           displayFields: [title, position],

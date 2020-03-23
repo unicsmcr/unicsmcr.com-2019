@@ -14,6 +14,9 @@ import {
   faTwitterSquare,
   faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
+import fb from "../assets/facebook.png";
+import tw from "../assets/twitter.png";
+import insta from "../assets/instagram.png";
 
 const Styles = styled.div`
   .navbar {
@@ -81,6 +84,11 @@ export const NavigationBar = () => (
             <NavScrollLink to="team">Team</NavScrollLink>
           </Nav.Item>
 
+          {/* Events Navlink */}
+          <Nav.Item>
+            <NavScrollLink to="events">Events</NavScrollLink>
+          </Nav.Item>
+
           {/* Gallery Navlink */}
           <Nav.Item>
             <Nav.Link>
@@ -95,14 +103,16 @@ export const NavigationBar = () => (
             </Nav.Link>
           </Nav.Item>
 
+          {/* Join Us Navlink */}
+          <Nav.Item>
+            <Nav.Link>
+              <Link to="/JoinUs">Join Us</Link>
+            </Nav.Link>
+          </Nav.Item>
+
           {/* Contact Navlink */}
           <Nav.Item>
             <NavScrollLink to="contact">Contact</NavScrollLink>
-          </Nav.Item>
-
-          {/* Events Navlink */}
-          <Nav.Item>
-            <NavScrollLink to="events">Events</NavScrollLink>
           </Nav.Item>
         </Nav>
 
@@ -114,13 +124,11 @@ export const NavigationBar = () => (
               target="_blank"
               rel="noopener noreferrer"
               href="http://www.facebook.com/unicsmanchester/"
-            >
-              <FontAwesomeIcon
-                icon={faFacebookSquare}
-                size="2x"
-                color="#AC6FC6"
+            > <img
+                src={fb}
+                alt="fb"
+                style={{ width: "50px"}}
               />
-              {/*How to change the background color to white and copyright issue!!!*/}
             </a>
           </Nav.Item>
           <Nav.Item>
@@ -129,11 +137,10 @@ export const NavigationBar = () => (
               target="_blank"
               rel="noopener noreferrer"
               href="https://twitter.com/unics_uom"
-            >
-              <FontAwesomeIcon
-                icon={faTwitterSquare}
-                size="2x"
-                color="#AC6FC6"
+            ><img
+                src={tw}
+                alt="tw"
+                style={{ width: "50px" }}
               />
             </a>
           </Nav.Item>
@@ -145,7 +152,11 @@ export const NavigationBar = () => (
               href="https://www.instagram.com/unics_uom/"
               style={{ paddingRight: 10 }}
             >
-              <FontAwesomeIcon icon={faInstagram} size="2x" color="#AC6FC6" />
+              <img
+                src={insta}
+                alt="insta"
+                style={{ width: "50px" }}
+              />
             </a>
           </Nav.Item>
         </Nav>

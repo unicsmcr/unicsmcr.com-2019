@@ -2,8 +2,10 @@ import React from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
+import { Link as ScrollLink } from 'react-scroll';
 import UniCS_logo from '../assets/UniCS_logo.png';
 import '../font.css';
+import './Navbar.css';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // import { fab } from '@fortawesome/free-brands-svg-icons'  <-- isn't used?
@@ -12,9 +14,6 @@ import {
   faTwitterSquare,
   faInstagram,
 } from '@fortawesome/free-brands-svg-icons';
-
-// import Scroll from 'react-scroll';
-// const ScrollLink = Scroll.ScrollLink;
 
 const Styles = styled.div`
   .navbar {
@@ -26,9 +25,8 @@ const Styles = styled.div`
   .navbar-nav,
   .nav-link {
     text-decoration: none;
-    padding-left: 15px;
     font-size: 18px;
-    color: #faf9fe;
+    color: white !important;
   }
 
   a:hover,
@@ -36,14 +34,29 @@ const Styles = styled.div`
   .navbar-nav,
   .nav-link:hover {
     text-decoration: none;
-    color: #ac6fc6;
+    color: #ac6fc6 !important;
   }
   #contact {
     color: blue;
   }
 `;
 
-export const Navigationbar = () => (
+function NavScrollLink(props) {
+  return (
+    <ScrollLink
+      href="#"
+      className="nav-link"
+      spy={true}
+      smooth={true}
+      duration={500}
+      {...props}
+    >
+      {props.children}
+    </ScrollLink>
+  );
+}
+
+export const NavigationBar = () => (
   <Styles>
     <Navbar expand="lg" sticky="top">
       <Navbar.Brand>
@@ -58,75 +71,88 @@ export const Navigationbar = () => (
       <Navbar.Toggle aria-controls="basic-navbar-nav" />
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
+          {/* Home Navlink */}
           <Nav.Item>
-            <Nav.Link>
-              <Link to="/">Home</Link>
-            </Nav.Link>
+            <NavScrollLink to="home-page">Home</NavScrollLink>
           </Nav.Item>
 
+          {/* Team Navlink */}
           <Nav.Item>
-            <Nav.Link>
-              <Link to="/">Team</Link>
-            </Nav.Link>
+            <NavScrollLink to="team">Team</NavScrollLink>
+          </Nav.Item>
 
-            {/* <Nav.Link
-                    onSelect={() => Scroll.scrollTo('team', {
-                        smooth: true,
-                        offset: -70,
-                        duration: 500,
-                    })}
-                    > Team
-                        <ScrollLink 
-                            to="team" 
-                            spy={true} 
-                            smooth={true} 
-                            duration={500} 
-                            className='team' 
-                            activeClass='active-team'
-                        >
-                            Team!!!!!!
-                        </ScrollLink>
-                    </Nav.Link> */}
-          </Nav.Item>
-          {/* ^add the ability to scroll to meet the team */}
+          {/* Gallary Navlink */}
           <Nav.Item>
-            <Nav.Link>
-              <Link to="/Gallery">Gallery</Link>
-            </Nav.Link>
+            <NavScrollLink to="gallary">Gallary</NavScrollLink>
           </Nav.Item>
+
+          {/* Sponsors Navlink */}
           <Nav.Item>
             <Nav.Link>
               <Link to="/Sponsors">Sponsors</Link>
             </Nav.Link>
           </Nav.Item>
+
+          {/* Join Us Navlink */}
           <Nav.Item>
             <Nav.Link>
               <Link to="/JoinUs">Join Us</Link>
             </Nav.Link>
           </Nav.Item>
+
+          {/* Contact Navlink */}
           <Nav.Item>
-            <Nav.Link>
-              <Link to="/Contact">Contact</Link>
-            </Nav.Link>
+            <NavScrollLink to="contact">Contact</NavScrollLink>
+          </Nav.Item>
+
+          {/* Events Navlink */}
+          <Nav.Item>
+            <NavScrollLink to="events">Events</NavScrollLink>
           </Nav.Item>
         </Nav>
+
+        {/* Social links Nav */}
         <Nav className="ml-auto">
-            <Nav.Item>
-                <a target="_blank" href="http://www.facebook.com/unicsmanchester/">
-                    <FontAwesomeIcon icon={faFacebookSquare} size="2x" color="#AC6FC6"/>
-                    {/*How to change the background color to white and copyright issue!!!*/}
-                </a>   
-            </Nav.Item>
-            <Nav.Item>
-                <a target="_blank" href="https://twitter.com/unics_uom">
-                    <FontAwesomeIcon icon={faTwitterSquare} size="2x" color="#AC6FC6" />
-                </a>
-            </Nav.Item>
-            <Nav.Item>
-                <a target="_blank" href="https://www.instagram.com/unics_uom/" style={{ paddingRight: 10}}>
-                    <FontAwesomeIcon icon={faInstagram} size="2x" color="#AC6FC6"/>
-                </a>
-            </Nav.Item>
+          <Nav.Item>
+            <a
+              className="social-icon"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="http://www.facebook.com/unicsmanchester/"
+            >
+              <FontAwesomeIcon
+                icon={faFacebookSquare}
+                size="2x"
+                color="#AC6FC6"
+              />
+              {/*How to change the background color to white and copyright issue!!!*/}
+            </a>
+          </Nav.Item>
+          <Nav.Item>
+            <a
+              className="social-icon"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://twitter.com/unics_uom"
+            >
+              <FontAwesomeIcon
+                icon={faTwitterSquare}
+                size="2x"
+                color="#AC6FC6"
+              />
+            </a>
+          </Nav.Item>
+          <Nav.Item>
+            <a
+              className="social-icon"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://www.instagram.com/unics_uom/"
+              style={{ paddingRight: 10 }}
+            >
+              <FontAwesomeIcon icon={faInstagram} size="2x" color="#AC6FC6" />
+            </a>
+          </Nav.Item>
         </Nav>
       </Navbar.Collapse>
     </Navbar>

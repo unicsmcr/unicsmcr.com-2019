@@ -41,3 +41,10 @@ div.container {
 .text {
   color: white;
 }
+
+.slideshow-container{
+  margin: auto;
+  /* padding: 100px;
+  width: 80%;
+  text-align: center; */
+}

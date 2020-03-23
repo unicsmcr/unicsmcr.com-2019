@@ -3,17 +3,18 @@ import { Nav, Navbar } from 'react-bootstrap';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 import { Link as ScrollLink } from 'react-scroll';
+import { HashLink as HashLink } from 'react-router-hash-link';
 import UniCS_logo from '../assets/UniCS_logo.png';
 import '../font.css';
 import './Navbar.css';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { fab } from '@fortawesome/free-brands-svg-icons'  <-- isn't used?
-import {
-  faFacebookSquare,
-  faTwitterSquare,
-  faInstagram,
-} from '@fortawesome/free-brands-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// // import { fab } from '@fortawesome/free-brands-svg-icons'  <-- isn't used?
+// import {
+//   faFacebookSquare,
+//   faTwitterSquare,
+//   faInstagram,
+// } from '@fortawesome/free-brands-svg-icons';
 import fb from "../assets/facebook.png";
 import tw from "../assets/twitter.png";
 import insta from "../assets/instagram.png";
@@ -81,12 +82,22 @@ export const NavigationBar = () => (
 
           {/* Team Navlink */}
           <Nav.Item>
+            {/* This scroll link method gives a smooth scroll but only works
+            on the home page */}
             <NavScrollLink to="team">Team</NavScrollLink>
+            {/* This scroll links works on other pages, but does
+            not give the smooth scroll effect  */}
+            <HashLink to="/#team">Team</HashLink>
           </Nav.Item>
 
           {/* Events Navlink */}
           <Nav.Item>
             <NavScrollLink to="events">Events</NavScrollLink>
+          </Nav.Item>
+
+          {/* Contact Navlink */}
+          <Nav.Item>
+            <NavScrollLink to="contact">Contact</NavScrollLink>
           </Nav.Item>
 
           {/* Gallery Navlink */}
@@ -108,11 +119,6 @@ export const NavigationBar = () => (
             <Nav.Link>
               <Link to="/JoinUs">Join Us</Link>
             </Nav.Link>
-          </Nav.Item>
-
-          {/* Contact Navlink */}
-          <Nav.Item>
-            <NavScrollLink to="contact">Contact</NavScrollLink>
           </Nav.Item>
         </Nav>
 

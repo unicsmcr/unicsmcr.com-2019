@@ -81,22 +81,17 @@ export const NavigationBar = () => (
             <NavScrollLink to="team">Team</NavScrollLink>
           </Nav.Item>
 
-          {/* Gallary Navlink */}
+          {/* Gallery Navlink */}
           <Nav.Item>
-            <NavScrollLink to="gallary">Gallary</NavScrollLink>
+            <Nav.Link>
+              <Link to="/Gallery">Gallery</Link>
+            </Nav.Link>
           </Nav.Item>
 
           {/* Sponsors Navlink */}
           <Nav.Item>
             <Nav.Link>
               <Link to="/Sponsors">Sponsors</Link>
-            </Nav.Link>
-          </Nav.Item>
-
-          {/* Join Us Navlink */}
-          <Nav.Item>
-            <Nav.Link>
-              <Link to="/JoinUs">Join Us</Link>
             </Nav.Link>
           </Nav.Item>
 

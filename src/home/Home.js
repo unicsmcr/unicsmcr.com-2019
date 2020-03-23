@@ -82,11 +82,11 @@ export default class Home extends React.Component {
           <MemberList teamMembers={teamMembers} />
         </div>
 
-        <div className="section-purple">
+        <div className="section-purple" id="contact">
           <Header>Contact Us</Header>
         </div>
 
-        <div className="section-black">
+        <div className="section-black" id="events">
           <Header>Events</Header>
         </div>
       </div>

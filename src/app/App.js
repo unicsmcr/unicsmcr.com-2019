@@ -7,13 +7,13 @@ import JoinUs from '../joinus/JoinUs';
 import Contact from '../contact/Contact';
 import NoMatch from '../NoMatch';
 import { Layout } from '../components/Layout';
-import { Navigationbar } from '../components/Navigationbar';
+import { NavigationBar } from '../components/Navbar';
 
 function App() {
   return (
     <React.Fragment>
       <Router>
-        <Navigationbar />
+        <NavigationBar />
         <Layout>
           <Switch>
             <Route exact path={['/', 'home']} component={Home} />

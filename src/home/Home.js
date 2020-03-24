@@ -58,7 +58,7 @@ export default class Home extends React.Component {
       <div id="home-page">
         <div className="section-black">
           <div className="slideshow-container p-md-2 col-12">
-            <div id="slideshow" className="carousel slide" data-ride="carousel">
+            <div id="slideshow" className="carousel slide" data-ride="carousel" data-interval="4000">
               <ol className="carousel-indicators">
                 <li data-target="#slideshow" data-slide-to="0" className="active"></li>
                 <li data-target="#slideshow" data-slide-to="1"></li>

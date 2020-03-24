@@ -45,10 +45,10 @@ const Styles = styled.div`
   }
 `;
 
-// function NavScrollLink(props) {
+// function HashLink(props) {
 //   return (
 //     <ScrollLink
-//       href="#"
+//       //href="#"
 //       className="nav-link"
 //       spy={true}
 //       smooth={true}

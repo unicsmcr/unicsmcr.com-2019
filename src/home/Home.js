@@ -7,7 +7,8 @@ import user from '../assets/user.png';
 // example pics
 import guh_2019 from '../assets/guh_2019.jpg';
 import sh_2019 from '../assets/sh_2019.jpg';
-import guh_2018 from '../assets/guh_2018.jpg';
+import sh_2018 from '../assets/sh_2018.jpg';
+import guh_sample from '../assets/guh_sample.jpg';
 
 const Header = styled.div`
   color: white;
@@ -56,24 +57,7 @@ export default class Home extends React.Component {
     return (
       <div id="home-page">
         <div className="section-black">
-          <Header style={{ fontSize: '5em' }}>
-            Uni<span style={{ color: 'yellow' }}>CS</span>
-          </Header>
-          <h2 style={{ textAlign: 'center', color: 'white' }}>
-            University of Manchester
-          </h2>
-          <h2
-            style={{
-              textAlign: 'center',
-              color: 'white',
-            }}
-          >
-            Computer Science Society
-          </h2>
-        </div>
-
-        <div className="section-black">
-          <div className="slideshow-container p-md-4 col-12 col-md-8">
+          <div className="slideshow-container p-md-2 col-12">
             <div id="slideshow" className="carousel slide" data-ride="carousel">
               <ol className="carousel-indicators">
                 <li data-target="#slideshow" data-slide-to="0" className="active"></li>
@@ -81,26 +65,30 @@ export default class Home extends React.Component {
                 <li data-target="#slideshow" data-slide-to="2"></li>
               </ol>
               <div className="carousel-inner">
+              <div class="carousel-caption d-block text-center">
+              <Header style={{ fontSize: '5em' }}>
+                Uni<span style={{ color: 'yellow' }}>CS</span>
+              </Header>
+              <h2 style={{ textAlign: 'center', color: 'white' }}>
+                University of Manchester
+              </h2>
+              <h2
+                style={{
+                  textAlign: 'center',
+                  color: 'white',
+                }}
+              >
+                Computer Science Society
+              </h2>
+              </div>
                 <div className="carousel-item active">
-                  <img className="d-block w-100" src={guh_2019} alt="First slide"/>
-                  <div className="carousel-caption d-none d-md-block">
-                    <h5>Event 1</h5>
-                    <p>Caption 1</p>
-                  </div>
+                  <img className="d-inline-block w-100" src={sh_2018} alt="First slide"/>
                 </div>
                 <div className="carousel-item">
-                  <img className="d-block w-100" src={sh_2019} alt="Second slide"/>
-                  <div className="carousel-caption d-none d-md-block">
-                    <h5>Event 2</h5>
-                    <p>Caption 2</p>
-                  </div>
+                  <img className="d-inline-block w-100" src={sh_2019} alt="Second slide"/>
                 </div>
                 <div className="carousel-item">
-                  <img className="d-block w-100" src={guh_2018} alt="Third slide"/>
-                  <div className="carousel-caption d-none d-md-block">
-                    <h5>Event 3</h5>
-                    <p>Caption 3</p>
-                  </div>
+                  <img className="d-inline-block w-100" src={guh_sample} alt="Third slide"/>
                 </div>
               </div>
               <a className="carousel-control-prev" href="#slideshow" role="button" data-slide="prev">
@@ -113,7 +101,12 @@ export default class Home extends React.Component {
               </a>
             </div>
           </div>
+
         </div>
+
+
+
+
 
         <div className="section-purple">
           <Header>About Us</Header>

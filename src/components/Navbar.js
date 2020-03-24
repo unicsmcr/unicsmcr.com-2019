@@ -45,20 +45,20 @@ const Styles = styled.div`
   }
 `;
 
-function NavScrollLink(props) {
-  return (
-    <ScrollLink
-      href="#"
-      className="nav-link"
-      spy={true}
-      smooth={true}
-      duration={500}
-      {...props}
-    >
-      {props.children}
-    </ScrollLink>
-  );
-}
+// function NavScrollLink(props) {
+//   return (
+//     <ScrollLink
+//       href="#"
+//       className="nav-link"
+//       spy={true}
+//       smooth={true}
+//       duration={500}
+//       {...props}
+//     >
+//       {props.children}
+//     </ScrollLink>
+//   );
+// }
 
 export const NavigationBar = () => (
   <Styles>
@@ -77,47 +77,42 @@ export const NavigationBar = () => (
         <Nav className="mr-auto">
           {/* Home Navlink */}
           <Nav.Item>
-            <NavScrollLink to="home-page">Home</NavScrollLink>
+            <HashLink to="/#">Home</HashLink>
           </Nav.Item>
 
           {/* Team Navlink */}
           <Nav.Item>
-            {/* This scroll link method gives a smooth scroll but only works
-            on the home page */}
-            <NavScrollLink to="team">Team</NavScrollLink>
-            {/* This scroll links works on other pages, but does
-            not give the smooth scroll effect  */}
             <HashLink to="/#team">Team</HashLink>
           </Nav.Item>
 
           {/* Events Navlink */}
           <Nav.Item>
-            <NavScrollLink to="events">Events</NavScrollLink>
+            <HashLink to="/#events">Events</HashLink>
           </Nav.Item>
 
           {/* Contact Navlink */}
           <Nav.Item>
-            <NavScrollLink to="contact">Contact</NavScrollLink>
+            <HashLink to="/#contact">Contact</HashLink>
           </Nav.Item>
 
           {/* Gallery Navlink */}
           <Nav.Item>
             <Nav.Link>
-              <Link to="/Gallery">Gallery</Link>
+              <HashLink to="/Gallery/#">Gallery</HashLink>
             </Nav.Link>
           </Nav.Item>
 
           {/* Sponsors Navlink */}
           <Nav.Item>
             <Nav.Link>
-              <Link to="/Sponsors">Sponsors</Link>
+              <HashLink to="/Sponsors/#">Sponsors</HashLink>
             </Nav.Link>
           </Nav.Item>
 
           {/* Join Us Navlink */}
           <Nav.Item>
             <Nav.Link>
-              <Link to="/JoinUs">Join Us</Link>
+              <HashLink to="/JoinUs/#">Join Us</HashLink>
             </Nav.Link>
           </Nav.Item>
         </Nav>

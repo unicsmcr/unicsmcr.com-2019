@@ -105,9 +105,6 @@ export default class Home extends React.Component {
         </div>
 
 
-
-
-
         <div className="section-purple">
           <Header>About Us</Header>
           <AboutUs>

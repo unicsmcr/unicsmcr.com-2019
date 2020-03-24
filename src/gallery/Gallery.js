@@ -1,4 +1,5 @@
 import React from 'react';
+import { HashLink as Link } from 'react-router-hash-link';
 import guh_2019 from '../assets/guh_2019.jpg';
 import sh_2019 from '../assets/sh_2019.jpg';
 import guh_2018 from '../assets/guh_2018.jpg';

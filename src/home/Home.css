@@ -7,8 +7,7 @@ div.container {
 .section-purple {
   width: 100%;
   position: relative;
-  min-height: 50vh;
-  padding-bottom: 20px;
+  overflow-y:hidden;
 }
 
 .section-black {
@@ -51,12 +50,15 @@ div.container {
   text-align: center;
   width: 100%;
   position: relative;
+  max-height: 90vh;
+  padding: 5px;
+  overflow-y: hidden;
 }
 
 
 .carousel-caption{
-     background-color: black;
-     opacity: 0.7;
-     top: 50px;
-     bottom: auto;
+  background-color: black;
+  opacity: 0.7;
+  top: 50px;
+  bottom: auto;
 }

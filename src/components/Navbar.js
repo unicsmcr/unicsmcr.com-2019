@@ -2,7 +2,7 @@ import React from 'react';
 import { Nav, Navbar } from 'react-bootstrap';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
-import { Link as ScrollLink } from 'react-scroll';
+// import { Link as ScrollLink } from 'react-scroll';
 import { HashLink as HashLink } from 'react-router-hash-link';
 import UniCS_logo from '../assets/UniCS_logo.png';
 import '../font.css';
@@ -76,22 +76,22 @@ export const NavigationBar = () => (
       <Navbar.Collapse id="basic-navbar-nav">
         <Nav className="mr-auto">
           {/* Home Navlink */}
-          <Nav.Item>
+          <Nav.Item className="nav-link">
             <HashLink to="/#">Home</HashLink>
           </Nav.Item>
 
           {/* Team Navlink */}
-          <Nav.Item>
+          <Nav.Item className="nav-link">
             <HashLink to="/#team">Team</HashLink>
           </Nav.Item>
 
           {/* Events Navlink */}
-          <Nav.Item>
+          <Nav.Item className="nav-link">
             <HashLink to="/#events">Events</HashLink>
           </Nav.Item>
 
           {/* Contact Navlink */}
-          <Nav.Item>
+          <Nav.Item className="nav-link">
             <HashLink to="/#contact">Contact</HashLink>
           </Nav.Item>
 

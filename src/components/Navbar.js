@@ -3,7 +3,7 @@ import { Nav, Navbar } from 'react-bootstrap';
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 // import { Link as ScrollLink } from 'react-scroll';
-import { HashLink as HashLink } from 'react-router-hash-link';
+import { HashLink } from 'react-router-hash-link';
 import UniCS_logo from '../assets/UniCS_logo.png';
 import '../font.css';
 import './Navbar.css';
@@ -109,12 +109,6 @@ export const NavigationBar = () => (
             </Nav.Link>
           </Nav.Item>
 
-          {/* Join Us Navlink */}
-          <Nav.Item>
-            <Nav.Link>
-              <HashLink to="/JoinUs/#">Join Us</HashLink>
-            </Nav.Link>
-          </Nav.Item>
         </Nav>
 
         {/* Social links Nav */}

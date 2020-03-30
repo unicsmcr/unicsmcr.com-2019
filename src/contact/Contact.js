@@ -1,18 +1,26 @@
 // contact@hacksoc.com
 import React from 'react';
+import './Contact.css';
+import stamp from '../assets/stamp.png';
 
+const encode = data => {
+  return Object.keys(data)
+    .map(key => encodeURIComponent(key) + '=' + encodeURIComponent(data[key]))
+    .join('&');
+};
 
 export default class Contact extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      sender: '',
+      email: '',
       name: '',
       content: '',
     };
     this.handleChange = this.handleChange.bind(this);
-    this.sendEmail = this.sendEmail.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
+
 
   handleChange(event) {
     const target = event.target;
@@ -23,10 +31,22 @@ export default class Contact extends React.Component {
       [name]: value,
     });
   }
-  sendEmail = _ => {
-    const email = this.state;
 
-
+  handleSubmit = async event => {
+    event.preventDefault();
+    try {
+      await fetch('/.netlify/functions/sendgrid', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/x-www-form-urlencoded',
+        },
+        body: encode({ 'form-name': 'contact', ...this.state }),
+      });
+    } catch (err) {
+      console.log("An error has occured");
+    }
+    console.log("your email has been sent");
+    // add something to tell them their qustion has been submitted
   };
 
   render() {
@@ -34,43 +54,46 @@ export default class Contact extends React.Component {
 
     return (
       <div>
-        <form>
+        <form onSubmit={this.handleSubmit} className="contact-container">
+          <h5 className="contact-text">YOUR EMAIL ADDRESS</h5>
           <div className="row">
-            <div className="form-group col-md-6 col-sm-12">
-              <input
-                className="form-control"
-                name="email"
-                onChange={this.handleChange}
-                placeholder="Email Address"
-                required
-                value={email.sender}
-              />
-            </div>
-            <div className="form-group col-md-6 col-sm-12">
-              <input
-                className="form-control"
-                name="name"
-                onChange={this.handleChange}
-                placeholder="Name (optional)"
-                value={email.name}
-              />
-            </div>
-          </div>
-
-          <div className="form-group">
-            <textarea
-              className="form-control"
-              name="message"
+            <input
+              className="email-input"
+              name="email"
               onChange={this.handleChange}
-              placeholder="Your message"
               required
-              value={email.content}
-              style={{ width: '100%', height: '150px' }}
+              value={email.email}
             />
           </div>
-        </form>
+          <h5 className="contact-text">YOUR NAME (OPTIONAL)</h5>
+          <div className="row">
+            <input
+              className="email-input"
+              name="name"
+              onChange={this.handleChange}
+              value={email.name}
+            />
+          </div>
+          <h5 className="contact-text">MESSAGE</h5>
+          <div className="row">
+            <textarea
+              className="email-input"
+              name="content"
+              onChange={this.handleChange}
+              required
+              value={email.content}
+              style={{ height: '150px' }}
+            />
+          </div>
 
-        <button onClick={this.sendEmail}> Send Email </button>
+          <div className="btn-contact-container">
+            <button type="submit" className="btn btn-secondary btn-contact"> Send Email →</button>
+          </div>
+          
+        </form>
+        <div class="stamp-img">
+          <img src={stamp} alt="Gallery Folder" style={{ width:"150px" }}/>
+        </div>
       </div>
     );
   }

@@ -1,0 +1,38 @@
+.email-input {
+    background: transparent;
+    border: none;
+    border-bottom: solid;
+    border-bottom-color: white;
+    width: 100%;
+}
+
+.contact-text {
+    color: white;
+    text-align: left;
+    padding: 10px;
+    padding-top: 30px;
+}
+
+.contact-container {
+    width: 50%;
+    margin: auto;
+    position: relative;
+}
+
+.btn-contact {
+    width: 100%;
+    font-size: 20px;
+}
+
+.btn-contact-container {
+    width: 300px;
+    margin: auto;
+    padding: 30px;
+}
+
+.stamp-img {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+
+}

@@ -16,12 +16,11 @@ exports.handler = async (event, _context) => {
   const { email, name, content } = body;
 
   const msg = {
-    to: "ayeshakhtar24@gmail.com", 
+    to: UNICS_EMAIL, 
     from: email,
     subject: `${name}: ${email}`,
     html: content,
   };
-  // to: UNICS_EMAIL <-- change after completed testing
 
   let response;
   try {

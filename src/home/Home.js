@@ -13,7 +13,7 @@ import guh_sample from '../assets/guh_sample.jpg';
 const Header = styled.div`
   color: white;
   text-align: center;
-  font-size: 2.5em;
+  font-size: 3em;
   padding-top: 10px;
   padding-bottom: 10px;
 `;

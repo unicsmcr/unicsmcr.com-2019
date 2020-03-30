@@ -55,7 +55,7 @@ export default class Contact extends React.Component {
     return (
       <div>
         <form onSubmit={this.handleSubmit} className="contact-container">
-          <h5 className="contact-text">YOUR EMAIL ADDRESS</h5>
+          <h4 className="contact-text">YOUR EMAIL ADDRESS</h4>
           <div className="row">
             <input
               className="email-input"
@@ -65,7 +65,7 @@ export default class Contact extends React.Component {
               value={email.email}
             />
           </div>
-          <h5 className="contact-text">YOUR NAME (OPTIONAL)</h5>
+          <h4 className="contact-text">YOUR NAME (OPTIONAL)</h4>
           <div className="row">
             <input
               className="email-input"
@@ -74,7 +74,7 @@ export default class Contact extends React.Component {
               value={email.name}
             />
           </div>
-          <h5 className="contact-text">MESSAGE</h5>
+          <h4 className="contact-text">MESSAGE</h4>
           <div className="row">
             <textarea
               className="email-input"

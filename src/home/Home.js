@@ -39,7 +39,7 @@ const teamMembers = [
 ];
 
 function MemberList(props) {
-  const memberDisplay = props.teamMembers.map(teamMember => (
+  const memberDisplay = props.teamMembers.map((teamMember) => (
     <div key={teamMember.name} className="grid-item-home">
       <img className="team-pic" src={teamMember.img} alt="" />
       <figcaption className="text">
@@ -58,15 +58,24 @@ export default class Home extends React.Component {
       <div id="home-page">
         <div className="section-black py-md-2">
           <div className="slideshow-container col-12">
-            <div id="slideshow" className="carousel slide" data-ride="carousel" data-interval="4000">
+            <div
+              id="slideshow"
+              className="carousel slide"
+              data-ride="carousel"
+              data-interval="4000"
+            >
               <ol className="carousel-indicators">
-                <li data-target="#slideshow" data-slide-to="0" className="active"></li>
+                <li
+                  data-target="#slideshow"
+                  data-slide-to="0"
+                  className="active"
+                ></li>
                 <li data-target="#slideshow" data-slide-to="1"></li>
                 <li data-target="#slideshow" data-slide-to="2"></li>
               </ol>
 
               <div className="carousel-inner">
-                <div class="carousel-caption d-block text-center">
+                <div className="carousel-caption d-block text-center">
                   <Header style={{ fontSize: '5em' }}>
                     Uni<span style={{ color: 'yellow' }}>CS</span>
                   </Header>
@@ -83,28 +92,54 @@ export default class Home extends React.Component {
                   </h2>
                 </div>
                 <div className="carousel-item active">
-                  <img className="d-inline-block w-100" src={sh_2018} alt="First slide"/>
+                  <img
+                    className="d-inline-block w-100"
+                    src={sh_2018}
+                    alt="First slide"
+                  />
                 </div>
                 <div className="carousel-item">
-                  <img className="d-inline-block w-100" src={sh_2019} alt="Second slide"/>
+                  <img
+                    className="d-inline-block w-100"
+                    src={sh_2019}
+                    alt="Second slide"
+                  />
                 </div>
                 <div className="carousel-item">
-                  <img className="d-inline-block w-100" src={guh_sample} alt="Third slide"/>
+                  <img
+                    className="d-inline-block w-100"
+                    src={guh_sample}
+                    alt="Third slide"
+                  />
                 </div>
               </div>
-              <a className="carousel-control-prev" href="#slideshow" role="button" data-slide="prev">
-                <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+              <a
+                className="carousel-control-prev"
+                href="#slideshow"
+                role="button"
+                data-slide="prev"
+              >
+                <span
+                  className="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
                 <span className="sr-only">Previous</span>
               </a>
-              <a className="carousel-control-next" href="#slideshow" role="button" data-slide="next">
-                <span className="carousel-control-next-icon" aria-hidden="true"></span>
+              <a
+                className="carousel-control-next"
+                href="#slideshow"
+                role="button"
+                data-slide="next"
+              >
+                <span
+                  className="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
                 <span className="sr-only">Next</span>
               </a>
             </div>
           </div>
-
         </div>
-
 
         <div className="section-purple">
           <Header>About Us</Header>

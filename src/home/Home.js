@@ -4,7 +4,7 @@ import '../font.css';
 import './Home.css';
 import aboutus from './aboutus/aboutus';
 import user from '../assets/user.png';
-import Contact from '../contact/Contact'
+import Contact from '../contact/Contact';
 // example pics pls crop to 5:3 ratio
 import sh_2019 from '../assets/sh_2019_edit.png';
 import sh_2018 from '../assets/sh_2018_edit.png';

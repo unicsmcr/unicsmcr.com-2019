@@ -15,9 +15,9 @@ import './Navbar.css';
 //   faTwitterSquare,
 //   faInstagram,
 // } from '@fortawesome/free-brands-svg-icons';
-import fb from "../assets/facebook.png";
-import tw from "../assets/twitter.png";
-import insta from "../assets/instagram.png";
+import fb from '../assets/facebook.png';
+import tw from '../assets/twitter.png';
+import insta from '../assets/instagram.png';
 
 const Styles = styled.div`
   .navbar {
@@ -62,7 +62,7 @@ const Styles = styled.div`
 
 export const NavigationBar = () => (
   <Styles>
-    <Navbar expand="lg" sticky="top">
+    <Navbar variant="dark" expand="lg" sticky="top">
       <Navbar.Brand>
         <Link to="/">
           <img
@@ -96,19 +96,14 @@ export const NavigationBar = () => (
           </Nav.Item>
 
           {/* Gallery Navlink */}
-          <Nav.Item>
-            <Nav.Link>
-              <HashLink to="/Gallery/#">Gallery</HashLink>
-            </Nav.Link>
+          <Nav.Item className="nav-link">
+            <HashLink to="/Gallery/#">Gallery</HashLink>
           </Nav.Item>
 
           {/* Sponsors Navlink */}
-          <Nav.Item>
-            <Nav.Link>
-              <HashLink to="/Sponsors/#">Sponsors</HashLink>
-            </Nav.Link>
+          <Nav.Item className="nav-link">
+            <HashLink to="/Sponsors/#">Sponsors</HashLink>
           </Nav.Item>
-
         </Nav>
 
         {/* Social links Nav */}
@@ -119,11 +114,8 @@ export const NavigationBar = () => (
               target="_blank"
               rel="noopener noreferrer"
               href="http://www.facebook.com/unicsmanchester/"
-            > <img
-                src={fb}
-                alt="fb"
-                style={{ width: "50px"}}
-              />
+            >
+              <img src={fb} alt="fb" style={{ width: '50px' }} />
             </a>
           </Nav.Item>
           <Nav.Item>
@@ -132,11 +124,8 @@ export const NavigationBar = () => (
               target="_blank"
               rel="noopener noreferrer"
               href="https://twitter.com/unics_uom"
-            ><img
-                src={tw}
-                alt="tw"
-                style={{ width: "50px" }}
-              />
+            >
+              <img src={tw} alt="tw" style={{ width: '50px' }} />
             </a>
           </Nav.Item>
           <Nav.Item>
@@ -147,11 +136,7 @@ export const NavigationBar = () => (
               href="https://www.instagram.com/unics_uom/"
               style={{ paddingRight: 10 }}
             >
-              <img
-                src={insta}
-                alt="insta"
-                style={{ width: "50px" }}
-              />
+              <img src={insta} alt="insta" style={{ width: '50px' }} />
             </a>
           </Nav.Item>
         </Nav>

@@ -1,45 +1,49 @@
 .email-input {
-    background: transparent;
-    border: none;
-    border-bottom: solid;
-    border-bottom-color: white;
-    width: 100%;
-    color: white;
-    padding: 10px;
-    font-size: 20px;
+  background: transparent;
+  border: none;
+  border-bottom: solid;
+  border-bottom-color: white;
+  width: 100%;
+  color: white;
+  padding: 10px;
+  font-size: 20px;
 }
 
 .email-input:focus {
-    outline: none;
+  outline: none;
 }
 
 .contact-text {
-    color: white;
-    text-align: left;
-    padding: 10px;
-    padding-top: 30px;
+  color: white;
+  text-align: left;
+  padding: 10px;
+  padding-top: 30px;
 }
 
 .contact-container {
-    width: 50%;
-    margin: auto;
-    position: relative;
+  width: 50%;
+  margin: auto;
+  position: relative;
 }
 
 .btn-contact {
-    width: 100%;
-    font-size: 20px;
+  width: 100%;
+  font-size: 20px;
 }
 
 .btn-contact-container {
-    width: 300px;
-    margin: auto;
-    padding: 30px;
+  width: 300px;
+  margin: auto;
+  padding: 30px;
 }
 
 .stamp-img {
-    position: absolute;
-    top: 10%;
-    right: 10%;
+  position: absolute;
+  top: 10%;
+  right: 10%;
+}
 
+.grecaptcha-badge {
+  display: none !important;
+  z-index: -1;
 }

@@ -10,7 +10,7 @@ const failResponse = {
   body: 'Something went wrong!',
 };
 
-const sendEmail = async msg => {
+const sendEmail = async (msg) => {
   let response;
   try {
     response = await sgMail.send(msg, false);
@@ -77,7 +77,7 @@ exports.handler = async (event, _context) => {
   // After recaptcha verification, send the email
   sgMail.setApiKey(SENDGRID_API_KEY);
   const msg = {
-    to: UNICS_EMAIL, 
+    to: UNICS_EMAIL,
     from: email,
     subject: `${name}: ${email}`,
     html: content,

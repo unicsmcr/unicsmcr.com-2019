@@ -1,5 +1,4 @@
 import React from 'react';
-import { HashLink as Link } from 'react-router-hash-link';
 import guh_2019 from '../assets/guh_2019.jpg';
 import sh_2019 from '../assets/sh_2019.jpg';
 import guh_2018 from '../assets/guh_2018.jpg';
@@ -54,19 +53,24 @@ const folders = [
   },
 ];
 export default class Home extends React.Component {
-  makeThumbnail = array => {
+  makeThumbnail = (array) => {
     if (array.length > 0) {
-      return array.map(function(each) {
+      return array.map(function (each, idx) {
         return (
-          <div>
-            <a target="_blank" href={each.url} class="grid-link-gallery">
+          <div key={idx}>
+            <a
+              target="_blank"
+              rel="noopener noreferrer"
+              href={each.url}
+              className="grid-link-gallery"
+            >
               <img
-                class="grid-item-gallery rounded"
+                className="grid-item-gallery rounded"
                 src={each.thumbnail}
                 alt="Gallery Folder"
               />
             </a>
-            <div class="gallery-caption">
+            <div className="gallery-caption">
               <h4>{each.name}</h4>
             </div>
           </div>
@@ -81,9 +85,13 @@ export default class Home extends React.Component {
     return (
       <div>
         <hr />
-        <h1 style={{ textAlign: 'center' }} class="display-4">Gallery Page</h1>
+        <h1 style={{ textAlign: 'center' }} className="display-4">
+          Gallery Page
+        </h1>
         <hr />
-        <div class="grid-container-gallery">{this.makeThumbnail(folders)}</div>
+        <div className="grid-container-gallery">
+          {this.makeThumbnail(folders)}
+        </div>
       </div>
     );
   }

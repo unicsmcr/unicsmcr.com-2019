@@ -7,19 +7,17 @@ div.container {
 .section-purple {
   width: 100%;
   position: relative;
-  overflow-y:hidden;
+  overflow-y: hidden;
 }
 
 .section-black {
   background-color: black;
 }
 
-
 .section-purple {
   background-color: #350b4d;
   text-align: justify;
 }
-
 
 .team-pic {
   width: 200px;
@@ -44,8 +42,7 @@ div.container {
   color: white;
 }
 
-
-.slideshow-container{
+.slideshow-container {
   background-size: cover;
   text-align: center;
   width: 100%;
@@ -55,10 +52,10 @@ div.container {
   overflow-y: hidden;
 }
 
-
-.carousel-caption{
-  background-color: black;
-  opacity: 0.7;
-  top: 50px;
-  bottom: auto;
+.carousel-caption {
+  background-color: rgba(0, 0, 0, 0.8);
+  right: 0;
+  bottom: 0;
+  left: 0;
+  top: 0;
 }

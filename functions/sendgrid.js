@@ -47,30 +47,20 @@ exports.handler = async (event, _context) => {
 
   // Verify the captcha
   let response;
-  let b = JSON.stringify({
-    response: captcha,
-    secret: SITE_RECAPTCHA_SECRET,
-  });
-  console.log(b);
   try {
     response = await fetch(CAPTCHA_API_ENDPOINT, {
       method: 'POST',
       headers: {
         Accept: 'application/json',
-        'Content-Type': 'application/json',
+        'Content-Type': 'application/x-www-form-urlencoded',
       },
-      body: JSON.stringify({
-        response: captcha,
-        secret: SITE_RECAPTCHA_SECRET,
-      }),
+      body: `secret=${SITE_RECAPTCHA_SECRET}&response=${captcha}`,
     });
   } catch (err) {
-    console.log(err);
     return failResponse;
   }
   let a = await response.json();
   if (!a.success) {
-    console.log(a);
     return failResponse;
   }
 

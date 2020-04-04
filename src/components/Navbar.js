@@ -79,27 +79,22 @@ export const NavigationBar = () => (
           <Nav.Item className="nav-link">
             <HashLink to="/#">Home</HashLink>
           </Nav.Item>
-
           {/* Team Navlink */}
           <Nav.Item className="nav-link">
             <HashLink to="/#team">Team</HashLink>
           </Nav.Item>
-
           {/* Events Navlink */}
           <Nav.Item className="nav-link">
             <HashLink to="/#events">Events</HashLink>
           </Nav.Item>
-
           {/* Contact Navlink */}
           <Nav.Item className="nav-link">
             <HashLink to="/#contact">Contact</HashLink>
           </Nav.Item>
-
           {/* Gallery Navlink */}
           <Nav.Item className="nav-link">
             <HashLink to="/Gallery/#">Gallery</HashLink>
           </Nav.Item>
-
           {/* Sponsors Navlink */}
           <Nav.Item className="nav-link">
             <HashLink to="/Sponsors/#">Sponsors</HashLink>

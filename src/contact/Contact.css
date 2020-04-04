@@ -43,7 +43,7 @@
   right: 10%;
 }
 
-.grecaptcha-badge {
-  display: none !important;
-  z-index: -1;
+.g-recaptcha {
+  margin: auto;
+  padding-top: 1rem;
 }

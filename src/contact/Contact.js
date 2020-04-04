@@ -20,32 +20,25 @@ export default class Contact extends React.Component {
       content: '',
       token: '',
       verified: false,
+      captchaReady: false,
     };
 
     this.captcha = null;
   }
 
-  handleChange = (e) => {
-    this.setState({
-      [e.target.name]: e.target.value,
-    });
-  };
-
-  onVerify = (token) => {
-    this.setState({ token, verified: true });
-  };
+  handleChange = (e) => this.setState({ [e.target.name]: e.target.value });
+  onLoad = () => this.setState({ captchaReady: true });
+  onVerify = (token) => this.setState({ token, verified: true });
 
   submitForm = async (e) => {
     e.preventDefault();
-    if (this.captcha) {
-      try {
-        await this.captcha.execute();
-      } catch (err) {
-        console.log('Failed Captcha');
-      }
-      console.log(this.state);
-      if (this.state.verified) this.submit();
+    try {
+      await this.captcha.renderExplicitly();
+      await this.captcha.execute();
+    } catch (err) {
+      console.log('Failed captcha with err' + err);
     }
+    if (this.state.verified) this.submit();
   };
 
   async submit() {
@@ -65,8 +58,8 @@ export default class Contact extends React.Component {
       });
     } catch (err) {
       console.log('An error has occured');
+      return;
     }
-    console.log('your email has been sent');
   }
 
   render() {
@@ -74,8 +67,8 @@ export default class Contact extends React.Component {
 
     return (
       <div>
-        <form onSubmit={this.submitForm} className="contact-container">
-          <h4 className="contact-text">EMAIL ADDRESS</h4>
+        <form className="contact-container">
+          <h4 className="contact-text">Your Email</h4>
           <div className="row">
             <input
               className="email-input"
@@ -85,7 +78,7 @@ export default class Contact extends React.Component {
               value={email}
             />
           </div>
-          <h4 className="contact-text">NAME (OPTIONAL)</h4>
+          <h4 className="contact-text">Name (Optional)</h4>
           <div className="row">
             <input
               className="email-input"
@@ -94,7 +87,7 @@ export default class Contact extends React.Component {
               value={name}
             />
           </div>
-          <h4 className="contact-text">MESSAGE</h4>
+          <h4 className="contact-text">Message</h4>
           <div className="row">
             <textarea
               className="email-input"
@@ -107,15 +100,25 @@ export default class Contact extends React.Component {
           </div>
 
           {/* Include the captcha for the form */}
-          <Reaptcha
-            ref={(e) => (this.captcha = e)}
-            sitekey={process.env.REACT_APP_SITE_RECAPTCHA_KEY}
-            onVerify={this.onVerify}
-            size="invisible"
-          />
+          <div className="row">
+            <Reaptcha
+              ref={(e) => (this.captcha = e)}
+              sitekey={process.env.REACT_APP_SITE_RECAPTCHA_KEY}
+              onVerify={this.onVerify}
+              onLoad={this.onLoad}
+              theme="dark"
+              size="normal"
+              explicit
+            />
+          </div>
 
           <div className="btn-contact-container">
-            <button type="submit" className="btn btn-secondary btn-contact">
+            <button
+              onClick={this.submitForm}
+              type="submit"
+              className="btn btn-secondary btn-contact"
+              disabled={this.state.recaptchaReady}
+            >
               Send Email
             </button>
           </div>

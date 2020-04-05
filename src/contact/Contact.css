@@ -3,7 +3,7 @@
   border: none;
   border-bottom: solid;
   border-bottom-color: white;
-  width: 100%;
+  width: 90%;
   color: white;
   padding: 10px;
   font-size: 20px;
@@ -37,10 +37,36 @@
   padding: 30px;
 }
 
+
 .stamp-img {
   position: absolute;
-  top: 10%;
+  top: 15%;
   right: 10%;
+  
+}
+
+/* @media (min-width: 430px) {
+  .btn-contact-container {
+    width: 300px;
+  }
+} */
+
+/* laptop size and down*/
+@media (max-width: 1024px) {
+  .stamp-img {
+    right: 3%;
+  }
+}
+
+/* large mobile and down */
+@media (max-width: 430px) {
+  .stamp-img {
+    visibility: hidden;
+  }
+
+  .btn-contact-container {
+    margin-left: -30%;
+  }
 }
 
 .g-recaptcha {

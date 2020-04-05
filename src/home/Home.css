@@ -59,3 +59,27 @@ div.container {
   left: 0;
   top: 0;
 }
+
+.home-title {
+  font-size: 5em;
+  color: white;
+  text-align: center;
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+
+.home-sub-title {
+  text-align: center;
+  color: white;
+}
+
+@media (max-width: 430px) {
+  .home-sub-title {
+    font-size: 1.2em;
+  }
+
+  .home-title {
+    font-size: 2.7em;
+    padding-bottom: 5px;
+  }
+}

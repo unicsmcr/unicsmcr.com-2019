@@ -22,6 +22,12 @@ const AboutUs = styled.div`
   color: white;
   font-size: 2vw;
   padding: 20px 10% 20px 10%;
+  @media (max-width: 768px) {
+    font-size: 3vw;
+  }
+  @media (max-width: 430px) {
+    font-size: 4vw;
+  }
 `;
 
 const teamMembers = [
@@ -76,17 +82,14 @@ export default class Home extends React.Component {
 
               <div className="carousel-inner">
                 <div className="carousel-caption d-block text-center">
-                  <Header style={{ fontSize: '5em' }}>
+                  <h1 className="home-title">
                     Uni<span style={{ color: 'yellow' }}>CS</span>
-                  </Header>
-                  <h2 style={{ textAlign: 'center', color: 'white' }}>
+                  </h1>
+                  <h2 className="home-sub-title">
                     University of Manchester
                   </h2>
                   <h2
-                    style={{
-                      textAlign: 'center',
-                      color: 'white',
-                    }}
+                    className="home-sub-title"
                   >
                     Computer Science Society
                   </h2>

@@ -3,20 +3,14 @@ import styled from 'styled-components';
 import '../font.css';
 import './Home.css';
 import aboutus from './aboutus/aboutus';
+import { Header, Hero } from './header/Header';
+import { Team } from '../team/Team';
 import user from '../assets/user.png';
 import Contact from '../contact/Contact';
 // example pics pls crop to 5:3 ratio
 import sh_2019 from '../assets/sh_2019_edit.png';
 import sh_2018 from '../assets/sh_2018_edit.png';
 import guh_sample from '../assets/guh_sample.jpg';
-
-const Header = styled.div`
-  color: white;
-  text-align: center;
-  font-size: 3em;
-  padding-top: 10px;
-  padding-bottom: 10px;
-`;
 
 const AboutUs = styled.div`
   color: white;
@@ -44,20 +38,6 @@ const teamMembers = [
   { name: 'Mohammed Anees', role: 'Procurement Officer', img: user },
 ];
 
-function MemberList(props) {
-  const memberDisplay = props.teamMembers.map((teamMember) => (
-    <div key={teamMember.name} className="grid-item-home">
-      <img className="team-pic" src={teamMember.img} alt="" />
-      <figcaption className="text">
-        <h4>{teamMember.name}</h4>
-        <h5>{teamMember.role}</h5>
-      </figcaption>
-    </div>
-  ));
-
-  return <div className="grid-container-home">{memberDisplay}</div>;
-}
-
 export default class Home extends React.Component {
   render() {
     return (
@@ -82,17 +62,7 @@ export default class Home extends React.Component {
 
               <div className="carousel-inner">
                 <div className="carousel-caption d-block text-center">
-                  <h1 className="home-title">
-                    Uni<span style={{ color: 'yellow' }}>CS</span>
-                  </h1>
-                  <h2 className="home-sub-title">
-                    University of Manchester
-                  </h2>
-                  <h2
-                    className="home-sub-title"
-                  >
-                    Computer Science Society
-                  </h2>
+                  <Hero />
                 </div>
                 <div className="carousel-item active">
                   <img
@@ -155,7 +125,7 @@ export default class Home extends React.Component {
 
         <div className="section-black" id="team">
           <Header>Meet The Team</Header>
-          <MemberList teamMembers={teamMembers} />
+          <Team teamMembers={teamMembers} />
         </div>
 
         <div className="section-purple" id="contact">

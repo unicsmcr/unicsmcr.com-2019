@@ -124,7 +124,7 @@ export default class Contact extends React.Component {
           </div>
         </form>
         <div className="stamp-img">
-          <img src={stamp} alt="Bee stamp" style={{ width: '150px' }} />
+          <img src={stamp} alt="Bee stamp" style={{ width: '100%' }} />
         </div>
       </div>
     );

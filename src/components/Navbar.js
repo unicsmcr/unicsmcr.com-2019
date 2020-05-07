@@ -4,20 +4,11 @@ import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 // import { Link as ScrollLink } from 'react-scroll';
 import { HashLink } from 'react-router-hash-link';
+import { SocialIcon } from './SocialIcon';
+
 import UniCS_logo from '../assets/UniCS_logo.png';
 import '../font.css';
 import './Navbar.css';
-
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// // import { fab } from '@fortawesome/free-brands-svg-icons'  <-- isn't used?
-// import {
-//   faFacebookSquare,
-//   faTwitterSquare,
-//   faInstagram,
-// } from '@fortawesome/free-brands-svg-icons';
-import fb from '../assets/facebook.png';
-import tw from '../assets/twitter.png';
-import insta from '../assets/instagram.png';
 
 const Styles = styled.div`
   .navbar {
@@ -102,37 +93,30 @@ export const NavigationBar = () => (
         </Nav>
 
         {/* Social links Nav */}
-        <Nav className="ml-auto">
+        <Nav className="ml-auto social-navbar">
           <Nav.Item>
-            <a
-              className="social-icon"
-              target="_blank"
-              rel="noopener noreferrer"
-              href="http://www.facebook.com/unicsmanchester/"
-            >
-              <img src={fb} alt="fb" style={{ width: '50px' }} />
-            </a>
+            <SocialIcon
+              url="http://www.facebook.com/unicsmanchester/"
+              socialIconName="facebook-f"
+            />
           </Nav.Item>
           <Nav.Item>
-            <a
-              className="social-icon"
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://twitter.com/unics_uom"
-            >
-              <img src={tw} alt="tw" style={{ width: '50px' }} />
-            </a>
+            <SocialIcon
+              url="https://twitter.com/unics_uom"
+              socialIconName="twitter"
+            />
           </Nav.Item>
           <Nav.Item>
-            <a
-              className="social-icon"
-              target="_blank"
-              rel="noopener noreferrer"
-              href="https://www.instagram.com/unics_uom/"
-              style={{ paddingRight: 10 }}
-            >
-              <img src={insta} alt="insta" style={{ width: '50px' }} />
-            </a>
+            <SocialIcon
+              url="https://www.instagram.com/unics_uom/"
+              socialIconName="instagram"
+            />
+          </Nav.Item>
+          <Nav.Item>
+            <SocialIcon
+              url="https://github.com/unicsmcr"
+              socialIconName="github"
+            />
           </Nav.Item>
         </Nav>
       </Navbar.Collapse>

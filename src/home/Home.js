@@ -5,12 +5,11 @@ import './Home.css';
 import aboutus from './aboutus/aboutus';
 import { Header, Hero } from './header/Header';
 import { Team } from '../team/Team';
-import user from '../assets/user.png';
 import Contact from '../contact/Contact';
 // example pics pls crop to 5:3 ratio
-import sh_2019 from '../assets/sh_2019_edit.png';
-import sh_2018 from '../assets/sh_2018_edit.png';
-import guh_sample from '../assets/guh_sample.jpg';
+import sh_2019 from '../assets/gallery/sh_2019_edit.png';
+import sh_2018 from '../assets/gallery/sh_2018_edit.png';
+import guh_sample from '../assets/gallery/guh_sample.jpg';
 
 const AboutUs = styled.div`
   color: white;
@@ -24,25 +23,11 @@ const AboutUs = styled.div`
   }
 `;
 
-const teamMembers = [
-  { name: 'Sara Caballero Bruno', role: 'Co-Chair', img: user },
-  { name: 'Raluca Lazarescu', role: 'Co-Chair', img: user },
-  { name: 'Aakash Kalantre', role: 'Treasurer', img: user },
-  { name: 'Joana Cruz', role: 'Secretary', img: user },
-  { name: 'Theodore Aaron', role: 'Game Dev Officer', img: user },
-  { name: 'Jess Xue', role: 'Graphics Officer', img: user },
-  { name: 'Smitha Kariapuram', role: 'May Ball Officer', img: user },
-  { name: 'Nora Tuta', role: 'PR Officer', img: user },
-  { name: 'Simas Kuprelis', role: 'Events Officer', img: user },
-  { name: 'Sean Parker', role: 'Dev Officer', img: user },
-  { name: 'Mohammed Anees', role: 'Procurement Officer', img: user },
-];
-
 export default class Home extends React.Component {
   render() {
     return (
       <div id="home-page">
-        <div className="section-black py-md-2">
+        <div className="section-black">
           <div className="slideshow-container col-12">
             <div
               id="slideshow"
@@ -125,7 +110,7 @@ export default class Home extends React.Component {
 
         <div className="section-black" id="team">
           <Header>Meet The Team</Header>
-          <Team teamMembers={teamMembers} />
+          <Team />
         </div>
 
         <div className="section-purple" id="contact">

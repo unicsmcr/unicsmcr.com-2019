@@ -21,6 +21,7 @@ div.container {
 
 .team-pic {
   width: 200px;
+  height: 200px;
   border-radius: 50%;
   padding: 8px;
 }
@@ -48,8 +49,8 @@ div.container {
   width: 100%;
   position: relative;
   max-height: 90vh;
-  padding: 5px;
   overflow-y: hidden;
+  padding: 0;
 }
 
 .carousel-caption {

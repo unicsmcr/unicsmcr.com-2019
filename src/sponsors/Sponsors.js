@@ -1,10 +1,10 @@
 import React from 'react';
-import bet365_logo from '../assets/bet365_logo.png';
-import gt_logo from '../assets/gt_logo.png';
-import ae_logo from '../assets/ae_logo.png';
-import bb_logo from '../assets/bb_logo.png';
-import ms_logo from '../assets/ms_logo.png';
-import bp_logo from '../assets/bp_logo.png';
+import bet365_logo from '../assets/sponsors/bet365_logo.png';
+import gt_logo from '../assets/sponsors/gt_logo.png';
+import ae_logo from '../assets/sponsors/ae_logo.png';
+import bb_logo from '../assets/sponsors/bb_logo.png';
+import ms_logo from '../assets/sponsors/ms_logo.png';
+import bp_logo from '../assets/sponsors/bp_logo.png';
 
 import '../font.css';
 import './Sponsors.css';

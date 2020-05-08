@@ -1,5 +1,7 @@
 # UniCS Website
 
+The official website of [UniCS](https://unicsmcr.com/) from The University of Manchester. We also have a [Facebook](https://www.facebook.com/unicsmanchester/), a [Twitter](https://twitter.com/unics_uom) and an [Instagram](https://www.instagram.com/unics_uom/) page!
+
 <p align="center">
   <a href="https://app.netlify.com/sites/fervent-blackwell-afd3e0/deploys" alt="Netlify Status">
     <img src="https://api.netlify.com/api/v1/badges/8b111cdc-1d41-47d9-a8da-059e0a5a3c03/deploy-status" />
@@ -29,12 +31,16 @@ Finally, replace placeholders in .env for your own project
 
 ## Starting locally
 
-Simpliy run the followinng commannd to start the app
+Simply run the following command to start the app
 
 ```bash
 $ npm start
 ```
 
-## License
+### Authors
 
-The UniCS website is licensed under the MIT License.
+See the [CONTRIBUTORS](CONTRIBUTORS) file.
+
+### License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.

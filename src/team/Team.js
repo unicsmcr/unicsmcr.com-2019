@@ -1,8 +1,8 @@
 import React from 'react';
 import team from '../assets/team/people';
 
-const memberDisplay = (team) =>
-  team.map((teamMember) => (
+const memberDisplay = (team) => {
+  return team.map((teamMember) => (
     <div key={teamMember.name} className="grid-item-home">
       <img className="team-pic" src={teamMember.img} alt="" />
       <figcaption className="text">
@@ -11,6 +11,7 @@ const memberDisplay = (team) =>
       </figcaption>
     </div>
   ));
+};
 
 export function Team() {
   return <div className="grid-container-home">{memberDisplay(team)}</div>;

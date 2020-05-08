@@ -26,8 +26,6 @@ exports.handler = async (event, _context) => {
   let results = await response.json();
   return {
     statusCode: results.error ? 400 : 200,
-    body: JSON.stringify({
-      data: results.data,
-    }),
+    body: JSON.stringify(results.data),
   };
 };

@@ -15,7 +15,7 @@ const sendEmail = async (msg) => {
   try {
     response = await sgMail.send(msg, false);
   } catch (err) {
-    return failResponse;
+    return { ...failResponse, body: 'Failed to send email' + err };
   }
 
   return {
@@ -57,11 +57,11 @@ exports.handler = async (event, _context) => {
       body: `secret=${SITE_RECAPTCHA_SECRET}&response=${captcha}`,
     });
   } catch (err) {
-    return failResponse;
+    return { ...failResponse, body: 'Failed to validate captcha' + err };
   }
   let a = await response.json();
   if (!a.success) {
-    return failResponse;
+    return { ...failResponse, body: 'Failed to extract response' };
   }
 
   // After recaptcha verification, send the email

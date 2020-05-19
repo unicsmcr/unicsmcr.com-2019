@@ -1,4 +1,3 @@
-// contact@hacksoc.com
 import React from 'react';
 import Reaptcha from 'reaptcha';
 
@@ -21,6 +20,8 @@ export default class Contact extends React.Component {
       token: '',
       verified: false,
       captchaReady: false,
+      submitted: false,
+      error: false,
     };
 
     this.captcha = null;
@@ -42,6 +43,7 @@ export default class Contact extends React.Component {
   };
 
   async submit() {
+    let isError = false;
     try {
       await fetch('/.netlify/functions/sendgrid', {
         method: 'POST',
@@ -57,17 +59,32 @@ export default class Contact extends React.Component {
         }),
       });
     } catch (err) {
-      console.log('An error has occured');
-      return;
+      isError = true;
     }
+    this.setState({
+      error: isError,
+      submitted: true,
+    });
   }
 
   render() {
-    const { email, name, content } = this.state;
+    const { email, name, content, submitted, error } = this.state;
 
     return (
       <div>
-        <form className="contact-container">
+        <div className={`form-alert ${!submitted ? 'hide' : null}`}>
+          {submitted && !error ? (
+            <p>Thank you, the form has been submitted</p>
+          ) : (
+            <p className="failed">
+              An error has occured while submitting the form
+            </p>
+          )}
+        </div>
+
+        <form
+          className={`contact-container ${submitted && !error ? 'hide' : null}`}
+        >
           <h4 className="contact-text">Your Email</h4>
           <div className="row">
             <input

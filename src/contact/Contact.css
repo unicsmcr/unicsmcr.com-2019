@@ -48,3 +48,31 @@
   margin: auto;
   padding-top: 1rem;
 }
+
+.hide {
+  display: none;
+}
+
+.form-alert {
+  text-align: center;
+}
+
+.success {
+  background-color: green;
+  color: white;
+  border-radius: 10px;
+  margin: 0 25%;
+  font-size: 1.1em;
+  padding: 20px;
+
+  margin-bottom: 20vh;
+}
+
+.failed {
+  background-color: #f44336;
+  color: white;
+  border-radius: 10px;
+  margin: 0 25%;
+  font-size: 1.1em;
+  padding: 20px;
+}

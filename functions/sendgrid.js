@@ -57,11 +57,11 @@ exports.handler = async (event, _context) => {
       body: `secret=${SITE_RECAPTCHA_SECRET}&response=${captcha}`,
     });
   } catch (err) {
-    return { ...failResponse, body: 'Failed to validate captcha' + err };
+    return { ...failResponse, body: 'Failed to validate captcha' };
   }
   let a = await response.json();
   if (!a.success) {
-    return { ...failResponse, body: 'Failed to extract response' };
+    return { ...failResponse, body: 'Failed to validate captcha' };
   }
 
   // After recaptcha verification, send the email
